@@ -1,0 +1,22 @@
+<article class="vacancy-card">
+  {{#if this.label}}
+  <div class="vacancy-card__labels">
+    <span class="label primary">{{this.label}}</span>
+  </div>
+  {{/if}}
+  <div class="vacancy-card-data">
+    <header class="vacancy-card__header">
+      <h3 class="vacancy-card__title"><a href="#">{{this.title}}</a></h3>
+      <p class="vacancy-card__subtitle">{{this.subtitle}}</p>
+    </header>
+    {{#if this.content}}
+    <section class="vacancy-card__content">
+      {{this.content}}
+    </section>
+    {{/if}}
+    <footer class="vacancy-card__footer">
+      <a href="#" class="button hollow">Откликнуться</a>
+      <time class="vacancy-card__date" datetime="2019-12-22" pubdate><i class="fal fa-calendar-alt"></i>&nbsp;{{this.date}}</time>
+    </footer>
+  </div>
+</article>

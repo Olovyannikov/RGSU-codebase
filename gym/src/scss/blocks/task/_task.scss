@@ -1,0 +1,30 @@
+.task-intro {
+  &__descr {
+    margin-bottom: 40px;
+  }
+  &__disclaimer {
+    padding-left: 40px;
+    margin-bottom: 60px;
+  }
+  &__list {
+    @include list-reset;
+    counter-reset: my-sec-counter;
+    li {
+      margin-bottom: 15px;
+      &::before {
+        counter-increment: my-sec-counter;
+        content: counter(my-sec-counter) ") ";
+      }
+    }
+  }
+
+  &__rules {
+    position: relative;
+    img {
+      position: absolute;
+      width: 447px;
+      height: 390px;
+      right: 20%;
+    }
+  }
+}

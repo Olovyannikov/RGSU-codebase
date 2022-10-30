@@ -1,0 +1,87 @@
+.consult {
+    padding-top: 46px;
+    background: #f2f4f8;
+    padding-bottom: 58px;
+    @media (min-width: $tablet) {
+        padding-bottom: 40px;
+        padding-top: 24px;
+    }
+}
+
+.consult__title {
+    padding-bottom: 30px;
+}
+
+.consult__form {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.consult__name {
+    margin-bottom: 15px;
+    width: 100%;
+    @media (min-width: $tablet) {
+        width: 240px;
+    }
+}
+
+.consult__mail#mail {
+    padding-top: 9px;
+    margin-bottom: 15px;
+    width: 100%;
+    @media (min-width: $tablet) {
+        width: 240px;
+    }
+}
+
+.consult__input {
+    margin-bottom: 15px;
+    padding: 9px 13px;
+    width: 100%;
+    @media (min-width: $tablet) {
+        width: 240px;
+    }
+}
+
+.consult__select {
+    margin-bottom: 15px;
+    color: $c-black-0;
+    background-color: #fff;
+    width: 100%;
+    height: 55px;
+    @media (min-width: $tablet) {
+        width: 240px;
+    }
+    // &:focus-within {
+    //     ~ svg {
+    //         transform: rotate(180deg);
+    //     }
+    // }
+}
+
+.consult__select-box {
+    position: relative;
+    svg {
+        transition: 0.2s;
+        position: absolute;
+        right: 18px;
+        top: 22px;
+    }
+}
+// .consult__btn {
+//     @include btn-reset;
+//     width: 55px;
+//     height: 55px;
+// }
+
+.consult__submit {
+    min-width: 166px;
+    height: 52px;
+}
+
+.consult__checkbox {
+    a {
+        display: contents;
+    }
+}

@@ -1,0 +1,93 @@
+.portfolio-cards__container {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.portfolio-cards__wrapper {
+    order: 2;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    gap: 23px;
+    > a {
+        width: 100%;
+        display: block;
+        .card {
+            width: 100%;
+        }
+    }
+    @media (min-width: 1400px) {
+        max-width: 1006px;
+        display: flex;
+        gap: 18px;
+        order: 1;
+        > a {
+            width: auto;
+            display: unset;
+            .card {
+                width: 238px;
+            }
+        }
+    }
+
+}
+
+.portfolio-cards__header {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    order: 0;
+    margin-top: 20px;
+    @media (min-width: 1400px) {
+        margin-bottom: 25px;
+    }
+}
+
+.portfolio-cards__counter {
+    background: #2bc584;
+    border-radius: 4px;
+    color: $c-light;
+    padding: 4px 10px;
+}
+
+.portfolio-cards__filter {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    order: 1;
+    width: 100%;
+    @media (min-width: 1400px) {
+        width: auto;
+        margin-top: 0;
+        margin-left: auto;
+    }
+}
+
+.portfolio-cards__filter .filter__wrapper {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    background: #fff;
+    flex-direction: column;
+    padding-left: 20px;
+    .filter__age {
+        width: 180px;
+    }
+    .filter__salary {
+        width: 180px;
+    }
+    @media (min-width: 1400px) {
+        padding-left: unset;
+        .filter__age {
+            width: auto;
+        }
+        .filter__salary {
+            width: auto;
+        }
+    }
+
+}
+
+.portfolio-cards__buttons {
+    @include list-reset;
+    margin-bottom: 27px;
+}

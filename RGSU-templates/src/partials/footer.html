@@ -1,0 +1,35 @@
+<footer class="footer">
+  {{#ifnotequal step 3}}
+  <!--Обычный футер-->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y">
+      <div class="cell large-4 large-order-2">
+        <p class="margin-0 large-text-center">Контакты для связи: <a href="mailto:prepod@rgsu.net">prepod@rgsu.net</a></p>
+      </div>
+      <div class="cell large-4 large-order-3">
+        <p class="margin-0 large-text-right"><a href="#">Сообщить об ошибке</a> </p>
+      </div>
+      <div class="cell large-4 large-order-1">
+        <p class="margin-0" title="ЛООЛО">© Личный кабинет ППС РГСУ</p>
+      </div>
+    </div>
+  </div>
+   <!--//Обычный футер-->
+  {{else}}
+  <!--Для расписания-->
+  <div class="grid-container">
+    <div class="grid-x grid-padding-x grid-padding-y align-center">
+      <div class="cell medium-4 large-auto text-center medium-order-2">
+        <span style="display: flex; flex-direction: column; justify-content: center; flex: 1 0 100%; height: 100%;">Версия раписания: от 20.03.2020</span>
+      </div>
+      <div class="cell medium-3 large-shrink medium-order-3">
+        <p class="margin-0 text-center medium-text-right"><a href="#" class="secondary expanded button round margin-0"><span class="button-icon"><svg viewbox="0 0 32 32"><use xlink:href="#print"></use></svg></span>Распечатать</a></p>
+      </div>
+      <div class="cell medium-4 large-shrink medium-order-1">
+        <p class="margin-0 text-center medium-text-left"><a href="#" class="secondary expanded  button round margin-0"><span class="button-icon"><svg viewbox="0 0 32 32"><use xlink:href="#bell"></use></svg></span>Сообщить об ошибке</a></p>
+      </div>
+    </div>
+  </div>
+  <!--//Для расписания-->
+  {{/ifnotequal}}
+</footer>

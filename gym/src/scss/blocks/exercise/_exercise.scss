@@ -1,0 +1,127 @@
+.exercise__options {
+  @include list-reset;
+  @include row-flex;
+
+  margin-bottom: 51px;
+}
+
+.exercise__list {
+  @include col;
+  @include size(5);
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 500;
+  position: relative;
+  cursor: pointer;
+
+  svg {
+    position: absolute;
+    top: 0;
+    z-index: -1;
+  }
+}
+
+.exercise__open {
+  @include btn-reset;
+  margin-left: 30px;
+
+  svg {
+    transform: rotate(90deg);
+    stroke: #000;
+    transition: .3s;
+  }
+
+  &_active {
+    svg {
+      transform: rotate(-90deg);
+    }
+
+    + .exercise__submenu {
+      visibility: visible;
+    }
+  }
+}
+
+.exercise__submenu {
+  @include list-reset;
+  position: absolute;
+  visibility: hidden;
+  background: #fff;
+  width: 120%;
+  top: 40px;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.4);
+
+  li {
+    padding: 10px 40px;
+
+    &:last-child {
+      padding-bottom: 20px;
+    }
+
+    &:hover {
+      background: #e5e5e5;
+    }
+  }
+}
+
+.exercise__intro {
+  padding: 40px;
+  margin-bottom: 20px;
+  min-height: 562px;
+  background: linear-gradient(180deg, rgba(255, 255, 255, 1) 80%, rgba(229, 229, 229, 1) 100%);
+
+  hr {
+    margin: 0 auto;
+    background: transparent;
+    border: 1px solid #373C41;
+  }
+}
+
+.exercise__descriptions {
+  @include list-reset;
+  min-height: 260px;
+  font-size: 18px;
+  line-height: 25px;
+  margin-top: 32px;
+
+  li {
+    position: relative;
+    padding-bottom: 30px;
+    text-indent: 1.2em;
+
+    &::before {
+      content: '-';
+      position: absolute;
+      left: -1.2em;
+    }
+  }
+}
+
+.exercise__btn {
+  display: inline-block;
+  margin: 42px 0 71px 0;
+}
+
+.exercise__title {
+  font-weight: 600;
+  font-size: rem-calc(33) !important;
+  line-height: rem-calc(40) !important;
+
+  margin: 0 0 30px;
+
+}
+
+.exercise__accordion-item {
+  background: #fff;
+  margin-bottom: 37.6px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  transition: .3s;
+
+  &:hover {
+    box-shadow: 5px 5px 5px 0 rgba(167, 230, 0, 0.3);
+  }
+}

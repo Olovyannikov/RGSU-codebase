@@ -1,0 +1,40 @@
+<div class="card">
+  <div class="card-section">
+    <h3 class="card__title">Показатели Scopus</h3>
+    <div class="chart-container" width="100%" height="300px">
+      <canvas id="scopus" ></canvas>
+      <!--<script src="{{root}}assets/vendor/chart.bundle.min.js"></script>-->
+      <script>
+        $(document).ready(function(){
+          var ctx = document.getElementById('scopus');
+          var kpi_radar = new Chart(ctx, {
+            type: 'line',
+            data: {
+              labels: ['Январь', 'Февраль', 'Март', 'Апрель', 'Май', 'Июнь' ],
+              datasets: [{
+                label: 'Показатели РИНЦ за полгода',
+                data: [20, 50, 40, 50, 73, 88],
+                fill: false,
+                borderColor: '#3464E0',
+                borderWidth: 4,
+                pointBorderWidth: 4,
+                pointBorderColor: '#3464E0',
+                pointBackgroundColor: '#3464E0'
+              }]
+            },
+            options: {
+              aspectRatio: 1,
+              scales: {
+                yAxes: [{
+                  ticks: {
+                    beginAtZero: true
+                  }
+                }]
+              }
+            }
+          });
+        });
+      </script>
+    </div>
+  </div>
+</div>

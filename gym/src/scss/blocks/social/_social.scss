@@ -1,0 +1,13 @@
+.social {
+  @include list-reset;
+  font-size: 0;
+  display: grid;
+  grid-template-columns: 20px 20px 20px;
+  gap: 27px;
+}
+
+.social__link-svg {
+  max-width: 22px;
+  width: 22px;
+  height: 20px;
+}

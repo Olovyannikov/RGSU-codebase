@@ -1,0 +1,117 @@
+<header class="header">
+  <div class="grid-container">
+    <div class="grid-x align-justify align-middle">
+      <div class="cell shrink large-order-1">
+        {{#with sidebar}}
+        <button type="button" class="burger sidebar-toggler hide-for-medium" id="burger" data-toggle="sidebar-{{this}}">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        {{/with}}
+        {{#ifequal step 3}}
+         <a href="#" class="logo logo--small"><img src="{{root}}assets/img/logo_rgsu.svg" alt="Корп РГСУ 2.0">Расписание учебных<br>занятий университета</a>
+        {{else}}
+          <a href="#" class="logo"><img src="{{root}}assets/img/logo.svg" alt="Корп РГСУ 2.0">Корп РГСУ 2.0</a>
+        {{/ifequal}}
+      </div>
+      <div class="cell small-12 large-auto small-order-3 large-order-2" style="position: relative;">
+        <nav class="menu-header" id="menu-header" data-toggler="is-open">
+          {{#ifequal step 1}}
+          <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-parent-link="true">
+            <li><a href="#">Новости</a></li>
+            <li><a href="#">Преподаватели</a></li>
+            <li><a href="#">Вакансии</a></li>
+            <li><a href="#">Объявления</a></li>
+            <li><a href="#">Мероприятия</a></li>
+          </ul>
+          {{/ifequal}}
+          {{#ifequal step 2}}
+          <ul class="menu vertical medium-horizontal" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-parent-link="true">
+            <li>
+              <a href="{{root}}step2/structure.html">Руководство</a>
+              <ul class="vertical menu nested">
+                <li><a href="{{root}}step2/structure.html#panel1">Ректорат</a></li>
+                <li><a href="{{root}}step2/structure.html#panel2">Ученый совет</a></li>
+              </ul>
+            </li>
+            <li><a href="{{root}}step2/users2.html">Сотрудники</a></li>
+            <li><a href="{{root}}step2/docs.html">Документы</a></li>
+            <li>
+              <a href="{{root}}step2/it-order.html"">IT</a>
+              <ul class="vertical menu nested">
+                <li><a href="{{root}}step2/it-order.html">Заявки</a></li>
+                <li><a href="{{root}}step2/it-docs.html">Инструкции</a></li>
+              </ul>
+            </li>
+            <li>
+              <a href="#">Заявки в управления</a>
+              <ul class="vertical menu nested">
+                <li><a href="#">Центр маркетинговых коммуникаций</a></li>
+                <li><a href="#">Отдел оперативной полиграфии</a></li>
+                <li><a href="#">Управление безопасности</a></li>
+                <li><a href="#">Хозяйственный отдел</a></li>
+                <li><a href="#">Медиацентр</a></li>
+              </ul>
+            </li>
+          </ul>
+          {{/ifequal}}
+          {{#ifequal step 3}}
+            <ul class="menu vertical medium-horizontal justify-end" data-responsive-menu="drilldown medium-dropdown" data-auto-height="true" data-parent-link="true">
+              <li><a href="#" class="menu-button is-active">Онлайн расписание</a></li>
+              <li><a href="#" class="menu-button">Чат боты</a></li>
+              <li><a href="#" class="menu-button">Инструкции</a></li>
+            </ul>
+          {{/ifequal}}
+        </nav>
+      </div>
+      {{#ifnotequal step 3}}
+      <div class="cell shrink large-order-3">
+        <!--это вход
+        <button type="button" class="header__button">
+          {{!--<span class="header__button__icon"><svg viewbox="0 0 32 32"><use xlink:href="#logout"></use></svg></span>--}}
+          <span class="header__button__icon"><i class="fal fa-sign-in-alt" style="font-size: 1.5em"></i></span>
+          <span class="header__button__text">Вход</span>
+        </button>
+        ну это вход-->
+
+        <!--это для тех кто вошел-->
+        <div class="header__avatar">
+          <button type="button" title="Вася" data-toggle="user-menu">
+            <img src="{{root}}assets/img/avatar.png" class="header__avatar__image" alt="Вася">
+            <span class="header__avatar__label"></span>
+          </button>
+          <div class="dropdown-pane dropdown-user padding-0" id="user-menu" style="max-width: 200px" data-dropdown data-close-on-click="true" data-v-offset="10" data-position="right" data-alignment="bottom">
+            <nav class="menu-dropdown">
+              <ul class="menu vertical">
+                <li><a href="#"><i class="menu-icon fal fa-address-card"></i>Профиль</a></li>
+                <li><a href="#"><i class="menu-icon"><svg viewbox="0 0 32 32"><use xlink:href="#bell"></use></svg></i>Уведомления&nbsp;<span class="small alert round label">20</span></a></li>
+                <li><a href="#"><i class="menu-icon"><svg viewbox="0 0 32 32"><use xlink:href="#key"></use></svg></i>Модерирование</a></li>
+                <li><a href="#"><i class="menu-icon"><svg viewbox="0 0 32 32"><use xlink:href="#network"></use></svg></i>Дашборд</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="menu-icon fal fa-portal-exit"></i>Выход</a></li>
+              </ul>
+            </nav>
+          </div>
+        </div>
+        {{#unlesspage 'index' 'users'}}
+        <!--//ну а это для тех кто вошел-->
+        <button type="button" class="dots-burger menu-toggler hide-for-medium" id="dots-burger" data-toggle="menu-header">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+        {{/unlesspage}}
+      </div>
+      {{else}}
+      <div class="cell shrink hide-for-medium order-2">
+        <button type="button" class="dots-burger menu-toggler hide-for-medium" id="dots-burger" data-toggle="menu-header">
+          <div></div>
+          <div></div>
+          <div></div>
+        </button>
+      </div>
+      {{/ifnotequal}}
+    </div>
+  </div>
+</header>

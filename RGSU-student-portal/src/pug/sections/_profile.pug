@@ -1,0 +1,55 @@
+section.profile
+    .profile__container.container
+        .profile__header
+            h2.profile__title Цифровое портфолио обучающегося
+        .profile__wrapper
+            .profile__main.card--stack
+                .profile__card
+                    .profile__progress.progress--circle(data-progress='60')
+                        picture
+                            source(srcset='img/card-avatar-1.webp' type='image/webp')
+                            img(src='img/card-avatar-1.jpg' alt='Мария Владимировна Н.')
+                    .profile__description
+                        p.profile__name Мария Владимировна Н.
+                        p.profile__data
+                            span.profile__age 20 лет
+                            span.profile__course 2 курс
+                        .profile__info
+                            .profile__year Год поступления: 
+                                span.profile__info-data 2017/2018
+                            .profile__education Образование: 
+                                span.profile__info-data Бакалавр
+                            .profile__faculty Факультет: 
+                                span.profile__info-data Факультет искусств
+                            .profile__direction Направление подготовки: 
+                                span.profile__info-data Социально-культурная деятельность
+                .profile__contacts.no-print
+                    .profile__social.social-block
+                        ul.social-block__list
+                            li.social-block__item
+                                a.social-block__link(href="#") VK
+                                    svg(fill="#C3CAD6" width="18" height="10")
+                                        use(href="#vk")
+                            li.social-block__item
+                                a.social-block__link.social-block__link--fb(href="#") FB
+                                    svg(fill="#C3CAD6" width="8" height="16")
+                                        use(href="#fb")
+                            li.social-block__item
+                                a.social-block__link.social-block__link--insta(href="#") Instagram
+                                    svg(fill="#C3CAD6" width="16" height="16")
+                                        use(href="#insta")
+                    .profile__activities.activities
+                        ul.activities__list
+                            li.activities__item
+                                a(href="#" data-tooltip="Необразовательные достижения" data-flow="up").activities__link.activities__link--achievements
+                                    svg(width='16' height='16')
+                                        use(href="#achievements")
+                            li.activities__item
+                                button.activities__link.activities__link--print(onclick="window.print()" aria-label="Распечатать документ")
+                                    svg(width='16' height='16')
+                                        use(href="#printer")
+                            li.activities__item
+                                a.activities__link.activities__link--youtube(href="#") Youtube
+                    button.btn.btn--regular.profile__contacts-data Контактные данные
+            include ./_portfolio
+            include ./_portfolio--middle-score

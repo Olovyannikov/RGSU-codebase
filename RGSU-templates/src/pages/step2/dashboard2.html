@@ -1,0 +1,31 @@
+---
+title: Дашборд
+layout: sidebar-left
+sidebar: left
+chart: true
+step: 2
+---
+<!--Лента-->
+<section class="section hide-for-print">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-4 xlarge-4">
+      {{> card-services}}
+    </div>
+    <div class="cell large-4 xlarge-4">
+      {{> card-kpi}}
+    </div>
+    <div class="cell large-4 xlarge-4">
+      {{> card-birthdates}}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Новостная лента</h2>
+  {{#repeat 2}}
+  {{> card-article title='Опубликовано новая вакансия на портале: "Доцент кафедры безопасности"' image='image 3.jpg' date='22 декабря 2019' views='178' comments='1' accent='success'}}
+  {{> card-article title='В разделе "блог" появилась новая запись: Методы цифровизации университетов' image='image 4.jpg' date='22 декабря 2019' views='178' comments='1' accent='primary'}}
+  {{> card-article title='22 января пройдет открытая лекция на тему: налоги и налогообложение.' image='image 5.jpg' date='22 декабря 2019' views='178' comments='1' accent='warning'}}
+  {{/repeat}}
+</section>
+<!--//Лента-->

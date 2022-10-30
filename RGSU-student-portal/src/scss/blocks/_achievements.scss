@@ -1,0 +1,32 @@
+.achievements__list {
+  @include list-reset;
+  display: flex;
+  font-size: 0;
+  padding-bottom: 17px;
+  max-width: 200px;
+}
+
+.achievement {
+  background-color: #F1F4F9;
+  border-radius: 50%;
+  width: 34px;
+  height: 34px;
+  margin-right: 21px;
+  position: relative;
+  transition: .2s;
+  &:last-child {
+    margin-right: 0;
+  }
+  &:hover  {
+    background: $c-green;
+  }
+}
+
+.achievement-icon {
+  position: absolute;
+  @include center;
+  fill: $c-darkgrey;
+  .achievement:hover  &{
+    fill: $c-light;
+  }
+}

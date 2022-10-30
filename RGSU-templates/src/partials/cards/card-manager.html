@@ -1,0 +1,23 @@
+<div class="manager-card {{this.class}}">
+  {{#if this.image}}
+  <div class="manager-card__image{{#if this.image-size}} manager-card__image--{{this.image-size}}{{/if}}">
+    <img src="{{root}}assets/img/{{this.image}}" alt="{{this.name}}">
+  </div>
+  {{/if}}
+  <div class="manager-card__content">
+    <a href="#" class="manager-card__name">
+      <span class="manager-card__surname">{{this.surname}}</span> 
+      <span class="manager-card__firstname">{{this.firstname}}</span> 
+      <span class="manager-card__lastname">{{this.lastname}}</span>
+    </a>
+    {{#if this.desc}}<span class="manager-card__desc">{{this.desc}}</span>{{/if}}
+    <ul class="inline-list">
+      {{#if this.tel}}<li><a href="tel:{{this.tel}}">{{this.tel}}</a></li>{{/if}}
+      {{#if this.email}}<li><a href="mailto:{{this.email}}">{{this.email}}</a></li>{{/if}}
+    </ul>
+    {{#with this.has-contact-form}}
+    <a href="#popup-person-contact" class="button inline-popup">Задать вопрос</a>
+    {{> popup-person-contact}}
+    {{/with}}
+  </div>
+</div>

@@ -1,0 +1,106 @@
+---
+title: Уведомления
+layout: sidebar-left
+sidebar: left
+step: 2
+---
+<!--//Уведомления-->
+<section class="section">
+  <div class="card card--large-stack">
+    <div class="card-section">
+      <ul class="tabs" data-tabs id="example-tabs" role="tablist">
+        <li class="tabs-title is-active" role="presentation"><a href="#panel1" aria-selected="true">Текущие</a></li>
+        <li class="tabs-title" role="presentation"><a href="#panel2" aria-selected="false">Архив</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <ul class="accordion" data-accordion>
+            {{#repeat 2}}
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Заказанная справка 2- НДФЛ - готова.&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color success-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Ваш руководитель оценил Вас в KPI&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color success-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">На сайт выгружены рассчетные листы&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color success-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            {{/repeat}}
+          </ul>
+          <div class="informer">
+            <i class="informer-icon success-color"><svg viewbox="0 0 32 32"><use xlink:href="#warning"></use></svg></i>
+            <span class="informer-title">У Вас нет уведомлений</span>
+          </div>
+        </div>
+        <div class="tabs-panel" id="panel2">
+          <div class="callout">
+            <div class="grid-x grid-margin-x">
+              <div class="cell shrink">
+                <p class="margin-0"><small>По годам:</small></p>
+                <ul class="inline-list">
+                  <li><a href="#">2020</a></li>
+                  <li><a href="#" class="medium-gray-color">2019</a></li>
+                  <li><a href="#" class="medium-gray-color">2018</a></li>
+                  <li><a href="#" class="medium-gray-color">2017</a></li>
+                  <li><a href="#" class="medium-gray-color">2016</a></li>
+                  <li><a href="#" class="medium-gray-color">2015</a></li>
+                  <li><a href="#" class="medium-gray-color">2014</a></li>
+                </ul>
+              </div>
+              <div class="cell shrink">
+                <p class="margin-0"><small>По месяцам:</small></p>
+                <ul class="inline-list">
+                  <li><a href="#">январь</a></li>
+                  <li><a href="#" class="medium-gray-color">февраль</a></li>
+                  <li><a href="#" class="medium-gray-color">март</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <ul class="accordion" data-accordion>
+            {{#repeat 2}}
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Заказанная справка 2- НДФЛ - готова.&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color medium-gray-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Ваш руководитель оценил Вас в KPI&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color medium-gray-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">На сайт выгружены рассчетные листы&nbsp;<time class="accordion-date">22 декабря 2019</time></a>
+              <i class="accordion-icon white-color medium-gray-background far fa-check"></i>
+              <div class="accordion-content" data-tab-content>
+
+              </div>
+            </li>
+            {{/repeat}}
+          </ul>
+
+          {{> pagination}}
+        </div>
+      </div> 
+      
+    </div>
+  </div>
+</section>
+<!--//Уведомления-->

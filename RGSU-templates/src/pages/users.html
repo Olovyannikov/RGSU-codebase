@@ -1,0 +1,79 @@
+---
+title: Преподаватели
+layout: default
+step: 1
+---
+<!--Преподаватели-->
+<section class="section">
+  <h2 class="section-title">{{title}}</h2>
+  <div class="card">
+    <div class="card-section">
+      <form class="form">
+        <fieldset>
+          <div class="grid-x grid-margin-x align-center">
+            <div class="cell large-3">
+              <div class="field">
+                <label for="faculty">Факультет</label>
+                <select id="faculty">
+                  <option value="Факультет 1">Факультет 1</option>
+                  <option value="Факультет 2">Факультет 2</option>
+                  <option value="Факультет 3">Факультет 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="cell large-3">
+              <div class="field">
+                <label for="department">Кафедра</label>
+                <select id="department">
+                  <option value="Кафедра 1">Кафедра 1</option>
+                  <option value="Кафедра 2">Кафедра 2</option>
+                  <option value="Кафедра 3">Кафедра 3</option>
+                </select>
+              </div>
+            </div>
+            <div class="cell large-3">
+              <div class="field">
+                <label for="">Быстрый поиск</label>
+                <input type="text" class="margin-0" placeholder="">
+              </div>
+            </div>
+            <div class="cell shrink">
+              <label>&nbsp;</label>
+              <button type="button" class="button">Поиск</button>
+            </div>
+          </div>
+        </fieldset>
+      </form>
+      <div class="table-scroll">
+        <table class="hover">
+          <thead>
+            <tr>
+              <th>ФИО</th>
+              <th>Факультет</th>
+              <th>Кафедра</th>
+              <th>Контакты</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{#repeat 10}}
+            <tr>
+              <td>
+                {{> card-person name='Солодуха Петр Викторович' image='avatar.png' image-size='static' desc='Декан экономического факультета'}}
+              </td>
+              <td>Факультет физической культуры	</td>
+              <td>
+                {{> card-person name='Кафедра иностранных языков' desc='Вильгельма пика 4, 8 копус, 201 ауд.'}}
+              </td>
+              <td>
+                <a href="gav_gav@rgsu.net">gav_gav@rgsu.net</a><br><span class="primary-color">1012</span>
+              </td>
+            </tr>
+            {{/repeat}}
+          </tbody>
+        </table>
+      </div>
+      {{> pagination}}
+    </div>
+  </div>
+</section>
+<!--//Преподаватели-->

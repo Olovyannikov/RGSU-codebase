@@ -1,0 +1,31 @@
+---
+title: Бронирование
+layout: sidebar-left
+sidebar: left
+step: 2
+swiper: true
+---
+<!--//Бронирование-->
+<section class="section">
+  <div class="card card--large-stack">
+    <div class="card-section">
+      <ul class="tabs" data-tabs id="example-tabs" role="tablist">
+        <li class="tabs-title is-active" role="presentation"><a href="#panel1" aria-selected="true">Мероприятия</a></li>
+        <li class="tabs-title" role="presentation"><a href="#panel2" aria-selected="false">Аудитория</a></li>
+        <li class="tabs-title" role="presentation"><a href="#panel3" aria-selected="false">История бронирования</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          {{> form-booking}}
+        </div>
+        <div class="tabs-panel" id="panel2">
+          Аудитория
+        </div>
+        <div class="tabs-panel" id="panel3">
+          История бронирования
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--//Бронирование-->

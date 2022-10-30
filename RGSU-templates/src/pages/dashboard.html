@@ -1,0 +1,50 @@
+---
+title: Дашборд
+layout: sidebar-left
+sidebar: left
+page-share: true
+step: 1
+chart: true
+---
+<!--Лента-->
+<section class="section">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-4">
+      {{> card-timetable}}
+    </div>
+    <div class="cell large-4">
+      {{> card-kpi}}
+    </div>
+    <div class="cell large-4">
+      {{> card-birthdates}}
+    </div>
+    <div class="cell large-6">
+      {{> card-rinc}}
+    </div>
+    <div class="cell large-6">
+      {{> card-scopus}}
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <h2 class="section-title">Лента портала</h2>
+  {{> card-article title='Опубликовано новая вакансия на портале: "Доцент кафедры безопасности"' date='22 декабря 2019' views='178' comments='1' accent='success'}}
+  {{> card-article title='В разделе "блог" появилась новая запись: Методы цифровизации университетов' date='22 декабря 2019' views='178' comments='1' accent='primary'}}
+  <article class="article-card article-card--alert article-card--invert">
+    <div class="article-card__labels">
+      <span class="label success">Партнер</span>
+    </div>
+    <div class="article-card-data">
+      <header class="article-card__header">
+        <h3 class="article-card__title">Всем преподавателям  от партнера "Сантехника.ру" доступна скидка. По коду <span class="label">RGSU</span> - 10%</h3>
+        <ul class="article-card__desc">
+          <li><i class="fal fa-calendar-alt"></i>&nbsp;<time class="article-card__date" datetime="2019-12-22" pubdate>22 декабря 2019</time></li>
+        </ul>
+      </header>
+    </div>
+  </article>
+  {{> card-article title='22 января пройдет открытая лекция на тему: налоги и налогообложение.' date='22 декабря 2019' views='178' comments='1' accent='warning'}}
+  {{> card-article title='Опубликовано новая вакансия на портале: "Доцент кафедры безопасности"' date='22 декабря 2019' views='178' comments='1' accent='secondary'}}
+</section>
+<!--//Лента-->

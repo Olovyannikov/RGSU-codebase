@@ -1,0 +1,115 @@
+.faq__header {
+    @include headerBlock;
+    margin-bottom: 35px;
+}
+
+.faq__title {
+    margin-right: 10px;
+    color: $c-black;
+    white-space: nowrap;
+
+}
+
+.faq__button {
+    position: relative;
+    white-space: nowrap;
+    &--helper {
+        padding-left: 48px;
+        padding-right: 19px;
+        margin-right: 19px;
+        margin-left: auto;
+    }
+    &--question {
+        padding-left: 28px;
+        padding-right: 28px;
+    }
+}
+
+.faq__button-icon {
+    position: absolute;
+    left: 17px;
+    top: 6px;
+    width: 24px;
+    height: 24px;
+    fill: #3464e0;
+    .faq__button--helper:hover & {
+        fill: $c-light;
+    }
+}
+
+.faq__buttons {
+    @include swiperCenter;
+}
+
+.faq__slide {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6e7781;
+    width: 100%;
+    background-color: #fff;
+    padding-left: 23px;
+    border-radius: 4px;
+    margin-bottom: 25px;
+}
+
+.faq__block {
+    min-height: 416px;
+}
+
+.faq__content {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap-reverse;
+
+    @media (min-width: $tablet) {
+        flex-wrap: unset;
+    }
+}
+
+.faq__wrapper {
+    @media (min-width: $tablet) {
+        width: 100%;
+        margin-right: 30px;
+    }
+}
+
+.faq__search-container {
+    position: relative;
+    display: flex;
+}
+
+.faq__search {
+    font-size: 16px;
+    line-height: 26px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 19px 60px 19px 18px;
+    height: 68px;
+    background: #ffffff;
+    border: 1px solid #f1f4f9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    appearance: none;
+}
+
+.faq__search-button {
+    @include btn-reset;
+    position: absolute;
+    right: 18px;
+    top: 18px;
+    font-size: 0;
+}
+
+.faq__search-icon {
+    fill: $c-darkgrey;
+}
+
+.faq__subtitle {
+    padding-bottom: 7px;
+    border-bottom: 1px solid #e4ecfa;
+    width: 100%;
+    margin-bottom: 25px;
+}

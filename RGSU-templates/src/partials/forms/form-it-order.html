@@ -1,0 +1,70 @@
+<form class="form form-it-order">
+  <div class="grid-x grid-margin-x">
+    <div class="cell medium-8 large-9">
+      <fieldset>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="order-system">Выберите тип системы</label>
+            </div>
+            <div class="cell medium-8 large-7">
+              <select id="order-system" data-xp="required: true">
+                <option value="1С">1С</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="order-type">Выберите тип</label>
+            </div>
+            <div class="cell medium-8 large-7">
+              <select id="order-type" data-xp="required: true">
+                <option value="Консультация">Консультация</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x ">
+            <div class="cell medium-4 large-3">
+              <label for="order-desc">Описание проблемы</label>
+            </div>
+            <div class="cell medium-8">
+              <textarea id="order-desc" rows="3" data-xp="required: true">Знаете, 1С не работает, в принципе это его обычное состояние</textarea>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="order-file">Файл</label>
+            </div>
+            <div class="cell medium-8">
+              <label for="order-file" class="file-upload file-upload--inline">
+                <input type="file" class="hide" id="order-file">
+                <span class="file-upload__title"><span class="caption">Выбрать файл&nbsp;<i class="button-icon"><svg viewbox="0 0 32 32"><use xlink:href="#clip"></use></svg></i></span></span>
+                <span class="file-upload__helper">* требования к файлу: формат JPG, PNG, не более 2 МБ</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x">
+            <div class="cell medium-8 large-offset-3">
+              <input type="submit" class="button" value="Отправить">
+            </div>
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    <div class="cell medium-4 large-3">
+      <div class="informer">
+        <i class="informer-icon success-color"><svg viewbox="0 0 32 32"><use xlink:href="#warning"></use></svg></i>
+        <span class="informer-title">Срок реагирования на заявку 1 день, срок исполнения 3 дня <sup class="alert-color">*</sup class="alert-color"></span>
+        <span class="informer-desc"><sup class="alert-color">*</sup class="alert-color">&nbsp;для простых задач</span>
+      </div>
+    </div>
+  </div>
+</form>

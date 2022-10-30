@@ -1,0 +1,28 @@
+.articles__item {
+  position: relative;
+  width: 449px;
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 20px;
+}
+
+.articles__item-bg {
+  z-index: -1;
+  position: absolute;
+}
+
+.article__title {
+  font-size: 28px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px;
+}
+
+.article__hashes {
+  display: flex;
+  gap: 10px;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,48 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css?v={{#random}}100000,999999{{/random}}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body class="template-{{layout}}">
+  {{> svg}}
+  {{> header}}
+  <main class="main">
+    {{#ifpage 'vacation' 'additional' 'blog' 'dashboard' 'dashboard2' 'education' 'education-item' 'science' 'users2' 'users-structure' 'order' 'responsibility' 'structure' 'reference' 'reference-history' 'staff' 'docs' 'it-docs' 'it-order' 'it-order-current' 'profile2' 'alerts' 'alerts-new'}}
+    <div class="pre-content"></div>
+    {{/ifpage}}
+    <div class="off-canvas-wrapper">
+      <aside class="sidebar sidebar-left off-canvas in-canvas-for-medium position-left" id="sidebar-left" data-off-canvas data-transition="overlay" data-options="inCanvasFor: medium">
+        <button type="button" class="close-button" data-close><i class="fal fa-times"></i></button>
+        {{> sidebar}}
+      </aside>
+      <article class="content off-canvas-content" data-off-canvas-content>
+        {{#ifpage 'vacation' 'additional' 'blog' 'dashboard' 'dashboard2' 'education' 'education-item' 'science' 'users2' 'users-structure' 'order' 'responsibility' 'structure' 'reference' 'reference-history' 'staff' 'docs' 'it-docs' 'it-order' 'it-order-current' 'profile2' 'alerts' 'alerts-new'}}
+        {{> breadcrumbs}}
+        <div class="page-header">
+          <h1 class="page-title">{{title}}</h1>
+          {{#if page-share}}
+          <div class="page-actions small button-group">
+            <a href="#" class="secondary round button" title="Поделиться профилем"><i class="button-icon margin-0"><svg viewbox="0 0 32 32"><use xlink:href="#share"></use></svg></i><span class="show-for-large">&nbsp;Поделиться профилем</span></a>
+            <span class="secondary round button button--pseudo"><i class="fal fa-eye hide-for-large">&nbsp;</i><span class="show-for-large">Просмотров профиля:</span>&nbsp;252</a>
+          </div>
+          {{/if}}
+        </div>
+        {{/ifpage}}
+        {{> body}}
+      </article>
+    </div>
+  </main>
+  {{> footer}}
+  {{#if chart}}
+  <script src="{{root}}assets/vendor/chart.bundle.min.js"></script>
+  {{/if}}
+  <script src="{{root}}assets/vendor/swiper.min.js"></script>
+  <script src="{{root}}assets/vendor/expromptum.min.js"></script>
+  <script src="{{root}}assets/js/app.js?v={{#random}}100000,999999{{/random}}"></script>
+  </body>
+</html>

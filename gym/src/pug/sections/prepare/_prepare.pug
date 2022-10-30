@@ -1,0 +1,99 @@
+section.prepare
+    .prepare__container.container
+        h2.title.prepare__title Подготовка к занятию ""
+        ul.breadcrumbs
+            li.breadcrumbs__item
+                a(href='/').breadcrumbs__link виды двигательной деятельности
+            li.breadcrumbs__item
+                a.breadcrumbs_link цикличные
+            li.breadcrumbs__item
+                a(href='run.html').breadcrumbs_link.breadcrumbs_link_current бег
+
+        .wrapper.prepare__wrapper
+            .prepare-quiz
+                h3.prepare-quiz__title Выберите тип заданий:
+                .prepare-quiz__level
+                    b.prepare-quiz__level-type Определение исходного уровня подготовки
+                    select.prepare-quiz__select
+                        option Не знаю
+                        option 1-ый уровень
+                        option 80-lvl
+                .prepare-quiz__level-descr
+                    b.prepare-quiz__level-title 1-ый уровень подготовки
+                    p С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки систем массового участия. Разнообразный и богатый опыт рамки и место обучения кадров способствует подготовке и реализации направлений прогрессивного развития.
+                    p Повседневная практика показывает, что постоянное информационно-пропагандистское обеспечение нашей деятельности играет важную роль в формировании системы обучения кадров, соответствует насущным потребностям.
+                    p С другой стороны постоянное информационно-пропагандистское обеспечение нашей деятельности представляет собой интересный эксперимент проверки систем массового участия. Разнообразный и богатый
+
+                .prepare-quiz__physique
+                    h4.prepare-quiz__subtitle Введите свои данные
+                    .prepare-quiz__physique-sex
+                        p пол
+                        label.nav__submenu-label(for='malesex') мужской
+                            input.nav__submenu-radio(value='malesex' type='radio' checked='true' name='sex' id='malesex')
+                            span.nav__submenu-element
+                        label.nav__submenu-label(for='femalesex') женский
+                            input.nav__submenu-radio(value='femalesex' type='radio' checked='true' name='sex' id='femalesex')
+                            span.nav__submenu-element
+                    .prepare-quiz__physique-data
+                        label(for='age') Возраст
+                            input(value='' type='text' name='age' id='age')
+                        label(for='height') Рост
+                            input(value='' type='text' name='height' id='height')
+                        label(for='weight') Вес
+                            input(value='' type='text' name='weight' id='weight')
+
+                .prepare-quiz__limits
+                    h4.prepare-quiz__subtitle Определение ограничений
+                    p Выберите из списка заболевания, которые у вас есть (при наличии)
+                    .prepare-quiz__limits-wrapper
+                        label.nav__submenu-label Острые заболевания и хронические болезни в стадии обострения
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Травмы головного и спинного мозга и их последствия
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Заболевания вестибулярного аппарата
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Лихорадочные состояния
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Период после проведения хирургических вмешательств
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Диагностированные заболевания сердечно-сосудистой системы (острый инфаркт миокарда, нестабильная стенокардия, острые воспалительные заболевания сердца, пороки сердца с критическими нарушениями внутрисердечной гемодинамики)
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Снижения зрения высокой степени <br> (миопия 5,0 диоптрии и более), изменения на глазном дне
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Эпилепсия, склонности к обморокам
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Заболевания, приводящие к нарушениям координации
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Опущение почек
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Заболевания мочеполовой системы
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Язва желудка и двенадцатиперстной кишки
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Обострение варикозной болезни
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                        label.nav__submenu-label Остеопороз
+                            input.nav__submenu-radio(type='radio' name='limits')
+                            span.nav__submenu-element
+                    p Выберите группу инвалидности (при наличии)
+                    select
+                        option
+                        option I
+                        option II
+                        option III
+                        option IV
+
+            button(type='button').btn.green Далее

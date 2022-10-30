@@ -1,0 +1,31 @@
+---
+title: Вход
+layout: clean
+step: 1
+---
+
+<div class="grid-x align-center">
+  <div class="cell large-shrink">
+    <!--Вход-->
+    <section class="section">
+      
+      <div class="card card--auto card--large-stack">
+        <div class="card-section">
+          <ul class="tabs" data-tabs id="example-tabs">
+            <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Авторизация</a></li>
+            <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Регистрация</a></li>
+          </ul>
+          <div class="tabs-content" data-tabs-content="example-tabs">
+            <div class="tabs-panel is-active" id="panel1">
+              {{> form-authorization}}
+            </div>
+            <div class="tabs-panel" id="panel2">
+              {{> form-registration}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--//Вход-->
+  </div>
+</div>

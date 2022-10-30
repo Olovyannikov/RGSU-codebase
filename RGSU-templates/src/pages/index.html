@@ -1,0 +1,253 @@
+---
+title: Главная
+layout: default
+step: 1
+swiper: true
+---
+<div class="grid-x grid-margin-x">
+  <div class="cell medium-8 large-9 print-12">
+    <!--Карусель-->
+    <section class="section section--hero">
+      <div class="swiper-container">
+        <div class="swiper-wrapper">
+          {{#repeat 3}}
+          <div class="swiper-slide">
+            <a href="#" class="hero">
+              <div class="hero__image__wrapper">
+                <img src="{{root}}assets/img/image 2.jpg" class="hero__image">
+              </div>
+              <div class="hero__content">
+                <p class="hero__title">Началась сессия</p>
+                <div class="hero__desc">
+                  Расписание доступно на сайте
+                </div>
+              </div>
+            </a>
+          </div>
+          {{/repeat}}
+        </div>
+        <div class="swiper-pagination"></div>
+      </div>
+    </section>
+    <!--//Карусель-->
+
+
+    <!--Элементы-->
+    <section class="section">
+      <h2 class="section-title">Developer mode</h2>
+      <div class="grid-x">
+        <div class="cell">
+          <div class="button-group small">
+            <a href="#popup-addexperience" class="inline-popup button" title="Добавить опыт" data-tooltip>Добавить
+              опыт</a>
+            <a href="#popup-success" class="inline-popup success button" title="Удалось" data-tooltip>Удалось</a>
+            <a href="#popup-alert" class="inline-popup alert button" title="Не удалось" data-tooltip>Не удалось</a>
+            <a href="#popup-forgetpass" class="inline-popup warning button" title="Забыл пароль" data-tooltip>Забыл
+              пароль</a>
+            <a href="#popup-registration" class="inline-popup secondary button" title="Регистрация"
+              data-tooltip>Регистрация</a>
+            <a href="{{root}}ajax-popup.html" class="ajax-popup button" title="Ajax popup" data-tooltip>Ajax popup</a>
+            <a href="#popup-password" class="inline-popup success button" title="Пароль изменен" data-tooltip>Пароль
+              изменен</a>
+            <a href="#popup-wrong" class="inline-popup alert button" title="Некорректный код" data-tooltip>Некорректный
+              код</a>
+            <a href="#popup-sms" class="inline-popup secondary button" title="SMS код" data-tooltip>SMS</a>
+          </div>
+          {{> popup-addexperience}}
+          {{> popup-success}}
+          {{> popup-alert}}
+          {{> popup-forgetpass}}
+          {{> popup-registration}}
+          {{> popup-password}}
+          {{> popup-wrong}}
+          <div class="grid-x grid-margin-x">
+            <div class="cell shrink">
+              <span class="button" id="KNOPKA">KNOPKA</span>
+            </div>
+            <div class="cell auto">
+              <pre><code>
+                 $(document).ready(function(){
+                  $('#KNOPKA').on('click', function(){
+                    $.jGrowl("Уведомление тут!");
+                  });
+                });
+              </code></pre>
+              <script>
+                $(document).ready(function () {
+                  $('#KNOPKA').on('click', function () {
+                    $.jGrowl("Уведомление тут!");
+                  });
+                });
+              </script>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- форма СМС-->
+
+      <div class="grid-x align-center">
+        <div class="cell large-shrink">
+          <section class="section">
+
+            <div class="card card--auto card--large-stack">
+              <div class="card-section">
+                <div class="tabs-content" data-tabs-content="example-tabs">
+                  <div>
+                    {{> form-password}}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--Вход-->
+        </div>
+      </div>
+
+      {{> popup-sms}}
+      <!--//форма СМС-->
+
+
+      <div class="grid-x align-center">
+        <div class="cell large-shrink">
+          <!--Вход-->
+          <section class="section">
+            <div class="grid-x align-center">
+              <div class="cell large-shrink">
+                <!--Вход-->
+                <section class="section">
+
+                  <div class="card card--auto card--large-stack">
+                    <div class="card-section">
+                      <ul class="tabs" data-tabs id="example-tabs">
+                        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true">Авторизация</a></li>
+                        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2">Регистрация</a></li>
+                      </ul>
+                      <div class="tabs-content" data-tabs-content="example-tabs">
+                        <div class="tabs-panel is-active" id="panel1">
+                          {{> form-authorization}}
+                        </div>
+                        <div class="tabs-panel" id="panel2">
+                          {{> form-registration}}
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </section>
+                <!--//Вход-->
+              </div>
+            </div>
+
+
+          </section>
+          <!--//Элементы-->
+
+
+          <!--Лента-->
+          <section class="section">
+            <h2 class="section-title">Лента проекта</h2>
+            {{> card-article title='Опубликовано новая вакансия на портале: "Доцент кафедры безопасности"' date='22 декабря 2019' views='178' comments='1' accent='success'}}
+            {{> card-article title='В разделе "блог" появилась новая запись: Методы цифровизации университетов' date='22 декабря 2019' views='178' comments='1' accent='primary'}}
+            <article class="article-card article-card--alert article-card--invert">
+              <div class="article-card__labels">
+                <span class="label success">Партнер</span>
+              </div>
+              <div class="article-card-data">
+                <header class="article-card__header">
+                  <h3 class="article-card__title">Всем преподавателям от партнера "Сантехника.ру" доступна скидка. По
+                    коду
+                    <span class="label">RGSU</span> - 10%</h3>
+                  <ul class="article-card__desc">
+                    <li><i class="fal fa-calendar-alt"></i>&nbsp;<time class="article-card__date" datetime="2019-12-22"
+                        pubdate>22 декабря 2019</time></li>
+                  </ul>
+                </header>
+              </div>
+            </article>
+            {{> card-article title='22 января пройдет открытая лекция на тему: налоги и налогообложение.' date='22 декабря 2019' views='178' comments='1' accent='warning'}}
+            {{> card-article title='Опубликовано новая вакансия на портале: "Доцент кафедры безопасности"' date='22 декабря 2019' views='178' comments='1' accent='secondary'}}
+          </section>
+          <!--//Лента-->
+
+          <!--Новости-->
+          <section class="section">
+            <h2 class="section-title">Новости университета</h2>
+            {{> card-article title='Более 800 тысяч учителей получат доплату за классное руководство' image='image 3.jpg' date='22 декабря 2019' views='178' comments=''}}
+            {{> card-article title='Перевести в цифру. В РФ могут ввести электронную проверку "домашки"' image='image 4.jpg' date='22 декабря 2019' views='178' comments=''}}
+          </section>
+          <!--//Новости-->
+        </div>
+        <div class="cell medium-4 large-3 print-hide">
+          <!--Расписание-->
+          <section class="section">
+            <h2 class="section-title">Расписание</h2>
+            <div class="card">
+              <div class="card__tags">
+                <span class="label success">четная неделя</span>
+              </div>
+              <div class="card-section">
+                <div class="timetable-widget">
+                  <span class="timetable-widget__time">11:21</span>
+                  <span class="timetable-widget__date">17 февраля</span>
+                  <span class="h2 primary-color margin-0">Идет вторая пара</span>
+                </div>
+              </div>
+            </div>
+          </section>
+          <!--//Расписание-->
+
+          <!--Объявления-->
+          <section class="section">
+            <h2 class="section-title">Объявления</h2>
+            <div class="card">
+              <div class="card-section">
+                <article class="notice">
+                  <time class="notice__date" datetime="2019-12-22">22 декабря 2019</time>
+                  <h6 class="notice__title"><a href="#">С 1 сентября в 8 корпусе после ремонта начала работу
+                      студенческая
+                      столовая.</a></h6>
+                </article>
+                <div class="card-divider"></div>
+                <article class="notice">
+                  <time class="notice__date" datetime="2019-12-22">22 декабря 2019</time>
+                  <h6 class="notice__title"><a href="#">С 1 сентября в 8 корпусе после ремонта начала работу
+                      студенческая
+                      столовая.</a></h6>
+                </article>
+              </div>
+            </div>
+          </section>
+          <!--//Объявления-->
+
+          <!--Статья из блога-->
+          <section class="section">
+            <h2 class="section-title">Статья из блога</h2>
+            <div class="card">
+              <div class="card-section">
+                {{> blog-entry 
+          title='Методы цифровизации социальных университетов в условиях низких финансовых возможностей'
+          author='Иванькин Алексей Леонидович'
+          author-desc='Доценты кафедры прикладной психологии'
+          author-image='dude-1.png'
+          image-size='large'
+          class="large-h margin-bottom-1"
+        }}
+              </div>
+            </div>
+          </section>
+          <!--//Статья из блога-->
+
+          <!--Сервисы университета-->
+          <section class="section">
+            <h2 class="section-title">Сервисы университета</h2>
+            <div class="button-group vertical">
+              <a href="#" class="button dark-gray hollow justify-center">Система дистанционного обучения</a>
+              <a href="#" class="button dark-gray hollow justify-center">Официальный сайт</a>
+              <a href="#" class="button dark-gray hollow justify-center">Корпоративная почта</a>
+              <a href="#" class="button dark-gray hollow justify-center">Онлайн библиотека</a>
+            </div>
+          </section>
+          <!--//Сервисы университета-->
+        </div>
+      </div>

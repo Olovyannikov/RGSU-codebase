@@ -1,0 +1,33 @@
+<article class="article-card{{#if this.accent}} article-card--{{this.accent}}{{/if}}{{#if this.invertorder}} article-card--invert{{/if}}">
+  {{#if this.tag}}
+  <div class="article-card__labels">
+    <span class="label success">{{this.tag}}</span>
+  </div>
+  {{/if}}
+  {{#if this.image}}
+  <div class="article-card__image">
+    <a href="#"><img src="{{root}}assets/img/{{this.image}}" alt="{{this.title}}"></a>
+  </div>
+  {{/if}}
+  <div class="article-card-data">
+    <header class="article-card__header">
+      {{#if this.editable}}
+      <div class="article-card__controls">
+        <a href="#" class="primary-color" title="Редактировать"><svg viewbox="0 0 32 32"><use xlink:href="#pencil-2"></use></svg></a>
+        <a href="#" class="alert-color" title="Удалить"><svg viewbox="0 0 32 32"><use xlink:href="#cross"></use></svg></a>
+      </div>
+      {{/if}}
+      <h3 class="article-card__title"><a href="#">{{this.title}}</a></h3>
+      <ul class="article-card__desc">
+        {{#if this.date}}<li><i class="fal fa-calendar-alt"></i>&nbsp;<time class="article-card__date" datetime="2019-12-22" pubdate>{{this.date}}</time></li>{{/if}}
+        {{#if this.views}}<li><i class="fal fa-eye"></i>&nbsp;<span class="article-card__views show-for-medium">Просмотров:&nbsp;</span>{{this.views}}</li>{{/if}}
+        {{#if this.comments}}<li><i class="fal fa-comments"></i>&nbsp;<span class="article-card__comments show-for-medium">Комментарии:&nbsp;</span>{{this.comments}}</li>{{/if}}
+      </ul>
+    </header>
+    {{#if this.content}}
+    <section class="article-card__content">
+      {{this.content}}
+    </section>
+    {{/if}}
+  </div>
+</article>

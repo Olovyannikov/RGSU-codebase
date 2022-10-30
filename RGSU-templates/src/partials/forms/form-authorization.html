@@ -1,0 +1,36 @@
+<form class="form form-auth">
+  <fieldset>
+    <div class="field">
+      <label for="auth-email">Ваш email</label>
+      <input type="email" name="f_Email" placeholder="Введите email" data-xp="required: true">
+      <span class="field-helper"></span>
+      <span class="field-error"></span>
+    </div>
+    <div class="field">
+      <label for="auth-email">Введите пароль</label>
+      <input type="password" name="f_Password" placeholder="Введите пароль" data-xp="required: true">
+      <span class="field-helper"></span>
+      <span class="field-error"></span>
+    </div>
+    <div class="field options">
+      <!--Это один чекбокс-->
+      <div class="selector">
+        <div class="pretty p-default p-curve p-smooth p-has-focus">
+          <input type="checkbox" name="f_Auth_dontsave" id="auth-dontsave"/>
+          <div class="state p-primary">
+            <label for="auth-dontsave">Чужой компьютер</label>
+          </div>
+        </div>
+      </div>
+      <!--//Это один чекбокс-->
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell small-6">
+        <input type="submit" class="expanded success button margin-0" value="Войти" data-xp="enabled_on_completed: true">
+      </div>
+      <div class="cell small-6">
+        <a href="#" class="button expanded clear margin-0">Забыли&nbsp;пароль?</a>
+      </div>
+    </div>
+  </fieldset>
+</form>

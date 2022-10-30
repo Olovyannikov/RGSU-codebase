@@ -1,0 +1,15 @@
+<a href="#" class="person-card {{this.class}}">
+  {{#if this.image}}
+  <div class="person-card__image{{#if this.image-size}} person-card__image--{{this.image-size}}{{/if}}">
+    <img src="{{root}}assets/img/{{this.image}}" alt="{{this.name}}">
+  </div>
+  {{/if}}
+  <div class="person-card__content">
+    {{#if this.name}}
+    <span class="person-card__name">{{this.name}}</span> 
+    {{/if}}
+    {{#if this.desc}}
+    <span class="person-card__desc">{{this.desc}}</span>
+    {{/if}}
+  </div>
+</a>

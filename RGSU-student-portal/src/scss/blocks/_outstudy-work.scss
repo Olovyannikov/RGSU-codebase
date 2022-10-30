@@ -1,0 +1,14 @@
+.outstudy-work {
+}
+
+.outstudy-work__header {
+  @include headerBlock;
+}
+
+.outstudy-work__title {
+}
+
+.outstudy-work__progress {
+  display: flex;
+  align-items: center;
+}

@@ -1,0 +1,53 @@
+nav.header__nav.nav#nav
+    ul.nav__list
+        li.nav__item
+            a(href='#').nav__link.nav__link_hasSubMenu Виды двигательной <br> деятельности
+                svg(width=9 height=34).svg-chevron
+                    use(href='#chevron')
+            ul.nav__submenu
+                li.nav__submenu-item
+                    .nav__submenu-sex Пол
+                        label.nav__submenu-label(for='male') Мужской
+                            input.nav__submenu-radio(value='male' type='radio' checked='true' name='sex' id='male')
+                            span.nav__submenu-element
+                        label.nav__submenu-label(for='female') Женский
+                            input.nav__submenu-radio(value='female' type='radio' name='sex' id='female')
+                            span.nav__submenu-element
+                    .nav__submenu-age
+                        label.nav__submenu-label(for='age') Возраст
+                        input.nav__submenu-input(type='text' name='age' id='age')
+                li.nav__submenu-item
+                    .nav__submenu-sport
+                        div Ходьба
+                        div Езда на велосипеде
+                        a(href='run.html' style='font-weight: bold') Бег
+                        div Лыжная подготовка
+                        div Катание на коньках
+                        div Скандинавская ходьба
+                        div Плавание
+                li.nav__submenu-item
+                    .nav__submenu-sport
+                        div Футбол
+                        div Волейбол
+                        div Баскетбол
+                        div Настольный теннис
+                        div Хоккей
+                li.nav__submenu-item
+                    .nav__submenu-sport
+                        div Йога
+                        div Воркаут
+                        div Фитнес
+                        div Различные виды танцев
+                        div Аэробика
+                        div Атлетическая гимнастика
+                li.nav__submenu-item
+                    .nav__submenu-sport
+                        div Различные виды <br> единоборств
+        li.nav__item
+            a(href="tests.html").nav__link Тесты
+        li.nav__item
+            a(href="glossary.html").nav__link Глосарий
+        li.nav__item
+            a(href="lessons.html").nav__link Занятия
+        li.nav__item
+            a(href="about.html").nav__link О проекте

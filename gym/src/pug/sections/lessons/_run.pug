@@ -1,0 +1,165 @@
+section.run
+    .run__container.container
+        h1.run__title.title Бег
+        ul.breadcrumbs
+            li.breadcrumbs__item
+                a(href='/').breadcrumbs__link главная
+            li.breadcrumbs__item
+                a.breadcrumbs_link.breadcrumbs_link_current бег
+        .layout-columns
+            section.layout-columns__main
+                .exercise
+                    ul.exercise__options
+                        li.exercise__list Список упражнений
+                            button.exercise__open
+                                svg.exercise__svg(width=19 height=19).svg-chevron
+                                    use(href='#chevron')
+                            ul.exercise__submenu
+                                li.exercise__submenu-item Дыхательное
+                                li.exercise__submenu-item Другое
+
+                        li.exercise__list Создать график упражнений
+                            button.exercise__open
+                                svg.exercise__svg(width=19 height=19).svg-chevron
+                                    use(href='#chevron')
+                            ul.exercise__submenu
+                                li.exercise__submenu-item Неделя
+                                li.exercise__submenu-item Месяц
+                .exercise__info
+                    .exercise__intro
+                        h2.exercise__title Бег - это:
+                        hr
+                        ul.exercise__descriptions
+                            li.exercise__descr способ передвижения циклического характера. Содержание цикла - двойной шаг с одноопорной фазой и фазой полета;
+                            li.exercise__descr один из естественных способ передвижения человека в пространстве. Главное отличие бега от ходьбы - наличие фазы полета в процессе выполнения беговых шагов;
+                            li.exercise__descr самостоятельная дисциплина легкоатлетического спорта, наиболее распространенное физическое упражнение, входящее в состав различных спортивных дисциплин.
+                        a(href='run_exercise.html').btn.green.exercise__btn начать занятие
+                    .exercise__infoblock
+                        .accordion
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-1(aria-expanded='false').accordion-button
+                                    span.accordion-title Историческая справка
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    hr
+                                    p Соревнования по бегу на скорость были приурочены к праздникам и проводились задолго до нашей эры в древних странах Переднего Востока - Междуречье, Месопотамия, Египет.
+                                    p Скорость перемещения древних и средневековых армий зависела от скорости передвижения наименее мобильной ее части - пехоты. Тренировки по бегу -- марш-броски с полной выкладкой были неотъемлемой частью жизни любой армии. Особо одаренных воинов, которые могли с высокой скоростью пробегать значительные расстояния, назначали гонцами. Они переносили свитки с информацией из города в городю.
+                                    p Первые официальные соревнования по бегу - Олимпийские игры 776 г до н. э. На этих соревнованиях спринтеры бежали только один стадий(192 м). В 724 г. до н. э. был введен бег на два стадия. Прошло еще четыре года, и древние греки решили ввести программу бег на 24 стадия. Существуют записи, которые подтверждают, что уже в то время у древних греков были свои системы тренировок бегунов. Практиковались тренировки со смешанным темпом, специальные беговые упражнения (бег с высоким подниманием, захлест голени, бег прыжками). Победители игр становились в своих городах героями, им ставили памятники и воспевали в стихах. Благодаря таким одам до нас через три тысячелетия дошли имена первых звезд атлетики - Астила, Эхиона и Фанаса.
+                                    p В 394 г. н. э. античные олимпийские игры прекратили свое существование, и в наступишем темном времени соревнования по бегу практически не проводились. Забеги на скорость устраивались во время продолжительных средневековых празднеств, но не были настолько популярны и многочисленны, как в древние временя.
+                                    p Дальнейшее развитие бег как самостоятельная дисциплина получил лишь в XVIII в.
+                                    p Наибольшую популярность бег приобрел в Туманном Альбионе: здесь проводились состязания на больших дорогах между городами или на дорожках иппдромов. Устраивались также соревнования по часовому бегу. В 1837 г. в Англии был проведен первый забег с препятствиями, в котором участвовали студенты колледжка города Регби. В 1845 г. в Англии был устроен забег на длинную дистанцию.
+                                    p Однако настоящий триумф спорта, в том числе бега, состоялся в 1886 г, когда под руководством Пьера де Кубертена открылись первые Олимпийские игры современности. На соревнованиях в Афинах были представлены следующие дистанции - 100, 400, 800, 1500, 100 м с барьерами и марафон. Постепенно в программу игр добавлялись все новые и новые беговые виды. Стартовать на этих состязаниях можно было из любой удобной для бегуна позы.
+                                    p В России зарождение бегового движения связано с созданием в 1888 г. кружка любителей спорта. Он был образован в местечке Тярлево под Санкт-Петербургом Петром Москвиным, который привлекал к занятиям отдыхавшую на каникулах молодежь. Через год прошли первые официальные соревнования по бегу.
+                                    p На международных соревнованиях члены кружка дебютировали в 1901 г. в Швеции. В первом чемпионате страны в 1908 г. в Санкт-Петербурге приняло участие всего 50 атлетов (из столицы и Риги). В 1912 г. делегация российских легкоатлетов впервые участвовала в Олимпийских играх.
+                                    p Однако из-за низкого уровня развития бега в России, недоукомплектованности команды никто из отечественных атлетов не завоевал призовых мест. Основная проблема занятий бегом в дореволюционной России - избранность этого вида спорта: им занимались только состоятельные граждане.
+                                    p В советское время бег стал действительно массовым явлением. На первом чемпионате СССР по легкой атлетике в 1923 г. участвовало 389 легкоатлетов из 40 городов страны. В спартакиаде 1928 г. приняло участие уже 1300 спортстменов не только из Советсткого Союза, но и 15 зарубежных стран.
+                                    p Впервые легкоатлеты СССР участвовали в Олимпийских играх в 1952 г. Их выступление было успешным. На Олимпиаде 1960 г. советская легкоатлетическая собрная одержала победу над американскими бегунами. Впоследствии кроме Олимпийских игр главными международными соревнованиями стали матчевые встречи СССР - США, в ходе которых поочередно побеждали оба соперника.
+                                    p Со временем благодаря совершенствованию тренировочного процесса, применению новых технологий при изготовлении покрытия беговых дорожек, модернизации одежды легкоатлетов и способов измерения времени результаты росли.
+                                    p Беговая дорожка античных олимпийских игр была грунтовой. Атлеты стартовали, опираясь на мраморные плиты. Беговая дорожка первых Олимпийских игр современности была из уплотненного грунта. Следующим шагом стало покрытие дорожек слоем гари. Прогресс не стоял на месте, беговые поверхности выполняли из бетона, асфальта, резинобитума. Сейчас устраивают покрытия из полиуретана на асфальтовой основе.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-3(aria-expanded='false').accordion-button
+                                    span.accordion-title Оздоровительный эффект бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-4(aria-expanded='false').accordion-button
+                                    span.accordion-title Общие рекомендации для бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-5(aria-expanded='false').accordion-button
+                                    span.accordion-title Спортивная одежда для бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-6(aria-expanded='false').accordion-button
+                                    span.accordion-title Техника бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-7(aria-expanded='false').accordion-button
+                                    span.accordion-title Дыхание во время бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-8(aria-expanded='false').accordion-button
+                                    span.accordion-title Питание
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-9(aria-expanded='false').accordion-button
+                                    span.accordion-title Бег как вид спорта
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-10(aria-expanded='false').accordion-button
+                                    span.accordion-title Классификация любительского бега
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-11(aria-expanded='false').accordion-button
+                                    span.accordion-title Общие правила соревнований
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+                            .accordion-iitem.exercise__accordion-item
+                                button#accordion-button-12(aria-expanded='false').accordion-button
+                                    span.accordion-title Список литературы
+                                    span.icon(aria-hidden='true')
+                                        svg(width=19 height=19).svg-chevron
+                                            use(href='#chevron')
+                                .accordion-content
+                                    p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores atque culpa cum debitis dignissimos distinctio doloribus enim excepturi exercitationem, expedita explicabo facilis fugiat laborum minus non placeat quo ullam ut.
+
+            aside.layout-columns__aside
+                h4.columns__aside-title Читайте также:
+                section.articles
+                    article.articles__item
+                        img.articles__item-bg(src='img/icons/article.svg')
+                        h5.article__title Заголовок
+                        .article__hashes
+                            span.article__hash #на_улице
+                            span.article__hash #цикличный
+                            span.article__hash #для_детей
+                    article.articles__item
+                        img.articles__item-bg(src='img/icons/article.svg')
+                        h5.article__title Заголовок
+                        .article__hashes
+                            span.article__hash #на_улице
+                            span.article__hash #цикличный
+                            span.article__hash #для_детей
+                    article.articles__item
+                        img.articles__item-bg(src='img/icons/article.svg')
+                        h5.article__title Заголовок
+                        .article__hashes
+                            span.article__hash #на_улице
+                            span.article__hash #цикличный
+                            span.article__hash #для_детей

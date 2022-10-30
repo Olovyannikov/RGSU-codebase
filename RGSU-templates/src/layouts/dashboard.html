@@ -1,0 +1,30 @@
+<!doctype html>
+<html class="no-js" lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="{{root}}assets/css/app.css?v={{#random}}100000,999999{{/random}}">
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+  </head>
+  <body class="template-{{layout}}">
+  {{> svg}}
+  {{> header}}
+  <main class="main">
+    <article class="content">
+      {{> body}}
+    </article>
+    <aside class="sidebar sidebar-left">
+      {{> sidebar}}
+    </aside>
+  </main>
+  {{> footer}}
+  {{#if chart}}
+  <script src="{{root}}assets/vendor/chart.bundle.min.js"></script>
+  {{/if}}
+  <script src="{{root}}assets/vendor/swiper.min.js"></script>
+  <script src="{{root}}assets/vendor/expromptum.min.js"></script>
+  <script src="{{root}}assets/js/app.js?v={{#random}}100000,999999{{/random}}"></script>
+  </body>
+</html>

@@ -1,0 +1,32 @@
+.dropdown {
+    display: none;
+    @media (min-width: $tablet) {
+        display: block;
+        min-width: 110px;
+    }
+}
+
+.dropdown__list {
+    visibility: hidden;
+    position: absolute;
+    left: -0%;
+    top: 100%;
+    @include list-reset;
+    background: $c-blue-600;
+    width: 132px;
+    .dropdown:hover & {
+        visibility: visible;
+        z-index: 101;
+    }
+}
+
+.dropdown__item {
+    transition: 0.2s;
+    padding: 10px 20px;
+    &:hover {
+        background: $c-blue-400;
+    }
+    a {
+        color: $c-white-0;
+    }
+}

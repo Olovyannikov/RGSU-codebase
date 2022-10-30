@@ -1,0 +1,11 @@
+mixin user(username, birthday, img, link)
+    - img = img == '' ?  'avatar-not-found.svg' : img
+    a(href=link).classmates__user
+        .classmates__avatar
+            picture
+                img(width="48" loading="lazy" src="img/" + img , alt=username)
+        .classmates__info
+            p.classmates__name
+                | #{username}
+            p.classmates__birth
+                | День рождения: #{birthday}

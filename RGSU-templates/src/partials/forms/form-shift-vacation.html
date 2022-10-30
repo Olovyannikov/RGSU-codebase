@@ -1,0 +1,26 @@
+<form class="form form-shift-vacation">
+  <fieldset>
+    <legend>Новая дата для отпуска</legend>
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-6 large-4">
+        <div class="field">
+          <label for="shift-vacation-from">От</label>
+          <div class="field-icon">
+            <input type="text" id="shift-vacation-from" data-date-picker data-xp="required: true" data-inputmask="'mask': '99.99.9999'">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+      <div class="cell medium-6 large-4">
+        <div class="field">
+          <label for="shift-vacation-to">До</label>
+          <div class="field-icon">
+            <input type="text" id="shift-vacation-to" data-date-picker data-xp="required: true" data-inputmask="'mask': '99.99.9999'">
+            <i class="fas fa-calendar-alt" aria-hidden="true"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <input type="submit" class="button margin-0" value="Отправить" data-xp="enabled_on_completed: true">
+  </fieldset>
+</form>

@@ -1,0 +1,344 @@
+<form class="form form-booking">
+  <fieldset>
+    <div class="grid-x grid-margin-x">
+      <div class="cell medium-6 large-5">
+        <div class="field">
+          <label for="booking-location">Выберите площадку</label>
+          <select id="booking-location" data-xp="required: true, valid: '[this] != 0'">
+            <option value="0">-- выбрать --</option>
+            <option value="1">Ул. Лосиноостровская 24</option>
+            <option value="2">Ул. Лосиноостровская 40</option>
+            <option value="3">ул. Стромынка 18</option>
+            <option value="4">ул. В. Пика 4</option>
+            <option value="5">Выездное мероприятие</option>
+            <option value="6">ДК РГСУ</option>
+            <option value="7">Стромынский переулок 18/28</option>
+          </select>
+        </div>
+      </div>
+      <div class="cell medium-6 large-5">
+        <div class="field">
+          <label for="booking-room">Выберите площадку</label>
+          <select id="booking-room" data-xp="required: true, valid: '[this] != 0'">
+            <option value="0">-- выбрать --</option>
+            <option value="14">Аудитория № 119</option>
+            <option value="13">Аудитория № 117</option>
+            <option value="12">Аудитория № 115</option>
+            <option value="11">Аудитория № 105</option>
+            <option value="10">Аудитория № 103</option>
+            <option value="9">Аудитория № 102</option>
+            <option value="8">Актовый зал</option>
+            <option value="7">Зал диссертационного совета</option>
+            <option value="6">Зал Ученого совета</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+
+  
+  <div class="events_booking">
+    <p class="legend">
+      <span class="occupy">Занято</span>
+      <span class="reserve">Забронировать</span>
+      <span class="unavialable">Недоступно</span>
+    </p>
+    <div class="events-time">
+      <table>
+        <tbody>
+          <tr>
+            <td><span class="period">9:00-10:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">10:00-11:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">11:00-12:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">12:00-13:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">13:00-14:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">14:00-15:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">15:00-16:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">16:00-17:00</span></td>
+          </tr>
+          <tr>
+            <td><span class="period">17:00-18:00</span></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="events_carousel swiper-container">
+      <div class="swiper-wrapper">
+
+        {{#repeat 2}}
+        <div class="swiper-slide">
+          <table class="events_week">
+            <thead>
+              <tr>
+                <th>
+                  <span class="day_name">Четверг</span><br>
+                  <span class="day_number">19.03.2020</span>
+                </th>
+                <th>
+                  <span class="day_name">Пятница</span><br>
+                  <span class="day_number">20.03.2020</span>
+                </th>
+                <th>
+                  <span class="day_name">Понедельник</span><br>
+                  <span class="day_number">23.03.2020</span>
+                </th>
+                <th>
+                  <span class="day_name">Вторник</span><br>
+                  <span class="day_number">24.03.2020</span>
+                </th>
+                <th>
+                  <span class="day_name">Среда</span><br>
+                  <span class="day_number">25.03.2020</span>
+                </th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=1&amp;time_to=10:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=1&amp;time_to=10:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=1&amp;time_to=10:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=2&amp;time_to=11:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=2&amp;time_to=11:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=2&amp;time_to=11:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=3&amp;time_to=12:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=3&amp;time_to=12:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=3&amp;time_to=12:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=4&amp;time_to=13:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=4&amp;time_to=13:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=4&amp;time_to=13:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=5&amp;time_to=14:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=5&amp;time_to=14:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=5&amp;time_to=14:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=6&amp;time_to=15:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=6&amp;time_to=15:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=6&amp;time_to=15:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=7&amp;time_to=16:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=7&amp;time_to=16:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=7&amp;time_to=16:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=8&amp;time_to=17:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=8&amp;time_to=17:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=8&amp;time_to=17:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+              <tr>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><span class="day_unavialable">Недоступно</span></td>
+                <td><a class="day_reserve" href="/it/booking/?date=23.03.2020&amp;time=9&amp;time_to=18:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=24.03.2020&amp;time=9&amp;time_to=18:00&amp;room=11&amp;area=4">Забронировать</a></td>
+                <td><a class="day_reserve" href="/it/booking/?date=25.03.2020&amp;time=9&amp;time_to=18:00&amp;room=11&amp;area=4">Забронировать</a></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        {{/repeat}}
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+
+  <fieldset>
+    <div class="field">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-4 large-3">
+          <label>Бронирование</label>
+        </div>
+        <div class="cell medium-8 large-6">
+          <p>Ул . Лосиноостровская 24, Конференц-зал</p>
+        </div>
+      </div>
+    </div>
+    <fieldset class="fields" data-xp="required: '[this] != 3'">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-4 large-3">
+          <label for="booking-date">Дата</label>
+        </div>
+        <div class="cell medium-8 large-6">
+          <div class="grid-x grid-margin-x">
+            <div class="cell shrink">
+              <input type="text" class="number-only" id="booking-date" data-date-picker
+                data-inputmask="'mask': '99.99.9999'">
+            </div>
+            <div class="cell shrink">
+              <select id="booking-time-start">
+                <option value="1">9:00</option>
+                <option value="2">10:00</option>
+                <option value="3">11:00</option>
+                <option value="4">12:00</option>
+                <option value="5">13:00</option>
+                <option value="6">14:00</option>
+                <option value="7">15:00</option>
+                <option value="8">16:00</option>
+                <option value="9">17:00</option>
+                <option value="10">18:00</option>
+              </select>
+            </div>
+            <div class="cell shrink">
+              <select id="booking-time-end">
+                <option value="1">9:00</option>
+                <option value="2">10:00</option>
+                <option value="3">11:00</option>
+                <option value="4">12:00</option>
+                <option value="5">13:00</option>
+                <option value="6">14:00</option>
+                <option value="7">15:00</option>
+                <option value="8">16:00</option>
+                <option value="9">17:00</option>
+                <option value="10">18:00</option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </div>
+    </fieldset>
+    <div class="field">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-4 large-3">
+          <label for="booking-title">Название мероприятия</label>
+        </div>
+        <div class="cell medium-8 large-6">
+          <textarea id="booking-title" rows="3"></textarea>
+        </div>
+      </div>
+    </div>
+    <fieldset class="fields">
+      <div class="grid-x grid-margin-x">
+        <div class="cell medium-4 large-3">
+          <label>Выберите оборудование</label>
+        </div>
+        <div class="cell medium-8 large-6">
+          <!--Блок оборудования-->
+          <div class="field">
+            <div class="grid-x grid-margin-x">
+              <div class="cell auto">
+                <label for="booking-device-1">Звуковое оборудование<br><small class="dark-gray-color">Доступно:
+                    1</small></label>
+              </div>
+              <div class="cell shrink">
+                <div class="number-input">
+                  <button type="button" class="number-input__dec">-</button>
+                  <input type="number" class="text-center" id="booking-device-1" value="0" min="0" max="99"
+                    data-xp="required: true">
+                  <button type="button" class="number-input__inc">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Блок оборудования-->
+          <!--Блок оборудования-->
+          <div class="field">
+            <div class="grid-x grid-margin-x">
+              <div class="cell auto">
+                <label for="booking-device-2">Микрофон<br><small class="dark-gray-color">Доступно: 2</small></label>
+              </div>
+              <div class="cell shrink">
+                <div class="number-input">
+                  <button type="button" class="number-input__dec">-</button>
+                  <input type="number" class="text-center" id="booking-device-2" value="0" min="0" max="99"
+                    data-xp="required: true">
+                  <button type="button" class="number-input__inc">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Блок оборудования-->
+          <!--Блок оборудования-->
+          <div class="field">
+            <div class="grid-x grid-margin-x">
+              <div class="cell auto">
+                <label for="booking-device-3">Мобильный проектор<br><small class="dark-gray-color">Доступно:
+                    3</small></label>
+              </div>
+              <div class="cell shrink">
+                <div class="number-input">
+                  <button type="button" class="number-input__dec">-</button>
+                  <input type="number" class="text-center" id="booking-device-3" value="0" min="0" max="99"
+                    data-xp="required: true">
+                  <button type="button" class="number-input__inc">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Блок оборудования-->
+          <!--Блок оборудования-->
+          <div class="field">
+            <div class="grid-x grid-margin-x">
+              <div class="cell auto">
+                <label for="booking-device-4">Рояль<br><small class="dark-gray-color">Доступно: 4</small></label>
+              </div>
+              <div class="cell shrink">
+                <div class="number-input">
+                  <button type="button" class="number-input__dec">-</button>
+                  <input type="number" class="text-center" id="booking-device-4" value="0" min="0" max="99"
+                    data-xp="required: true">
+                  <button type="button" class="number-input__inc">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Блок оборудования-->
+          <!--Блок оборудования-->
+          <div class="field">
+            <div class="grid-x grid-margin-x">
+              <div class="cell auto">
+                <label for="booking-device-5">Прожектор 5кВт<br><small class="dark-gray-color">Доступно:
+                    20</small></label>
+              </div>
+              <div class="cell shrink">
+                <div class="number-input">
+                  <button type="button" class="number-input__dec">-</button>
+                  <input type="number" class="text-center" id="booking-device-5" value="0" min="0" max="99"
+                    data-xp="required: true">
+                  <button type="button" class="number-input__inc">+</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!--//Блок оборудования-->
+        </div>
+      </div>
+    </fieldset>
+  </fieldset>
+</form>

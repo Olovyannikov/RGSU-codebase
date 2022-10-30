@@ -1,0 +1,151 @@
+{{#ifpage 'job'}}
+  <!--Фильтры-->
+  <section class="section">
+    <form action="">
+      <fieldset class="card">
+        <div class="card-section">
+          <h4 class="card__title">Должность</h4>
+          <div class="field options v-scroll" style="max-height: 200px;">
+            {{#each job.positions}}
+            <div class="selector">
+              <div class="pretty p-default p-curve p-smooth p-has-focus">
+                <input type="checkbox" id="job-position-{{@index}}"/>
+                <div class="state p-primary-o">
+                  <label for="job-position-{{@index}}">{{this.title}}</label>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="card">
+        <div class="card-section">
+          <h4 class="card__title">Факультет</h4>
+          <div class="field options v-scroll" style="max-height: 200px;">
+            {{#each job.faculties}}
+            <div class="selector">
+              <div class="pretty p-default p-curve p-smooth p-has-focus">
+                <input type="checkbox" id="job-faculties-{{@index}}" {{#if this.disabled}}disabled{{/if}}/>
+                <div class="state p-primary-o">
+                  <label for="job-faculties-{{@index}}">{{this.title}}</label>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </fieldset>
+      <fieldset class="card">
+        <div class="card-section">
+          <h4 class="card__title">Кафедра</h4>
+          <div class="field options">
+            {{#each job.department}}
+            <div class="selector">
+              <div class="pretty p-default p-curve p-smooth p-has-focus">
+                <input type="checkbox" id="job-department-{{@index}}"/>
+                <div class="state p-primary-o">
+                  <label for="job-department-{{@index}}">{{this.title}}</label>
+                </div>
+              </div>
+            </div>
+            {{/each}}
+          </div>
+        </div>
+      </fieldset>
+    </form>
+  </section>
+  <!--//Фильтры-->
+{{/ifpage}}
+
+
+{{#ifpage 'dashboard' 'blog' 'education' 'education-item' 'science' 'additional'}}
+<!--Юзер-->
+<section class="section">
+  <a href="#" class="profile-card">
+    <div class="profile-card__image">
+      <img src="{{root}}assets/img/dude-2.png" alt="Мельничук Александр Васильевич">
+    </div>
+    <div class="profile-card__content">
+      <span class="profile-card__name"><span class="surname">Мельничук</span> <span class="firstname">Александр</span> <span class="lastname">Васильевич</span></span>
+      <span class="profile-card__desc">Декан факультета управления</span>
+    </div>
+  </a>
+</section>
+<!--//Юзер-->
+
+<!--Мой профиль-->
+<section class="section">
+  <h5 class="section-title">Мой профиль</h5>
+  <nav class="menu-sidebar">
+    <ul class="menu">
+      <li><a href="#"{{#ifpage 'dashboard'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#network"></use></svg></i>Дашборд</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#gear"></use></svg></i>Редактировать профиль</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#bell"></use></svg></i>Уведомления<span class="label round alert">1</span></a></li>
+      {{!--<li><a href="#"{{#ifpage 'blog'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#pencil-1"></use></svg></i>Написать в&nbsp;блог</a></li>--}}
+    </ul>
+  </nav>
+</section>
+<!--//Мой профиль-->
+
+<!--Портфолио-->
+<section class="section">
+  <h5 class="section-title">Портфолио<span class="section-title__toggler"><svg viewbox="0 0 32 32"><use xlink:href="#chevron-down"></use></svg></span></h5>
+  <div class="section-fold">
+    <nav class="menu-sidebar">
+      <ul class="menu">
+        <li><a href="#"{{#ifpage 'education'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#checklist"></use></svg></i>Учебная работа</a></li>
+        <li><a href="#"{{#ifpage 'science'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#science"></use></svg></i>Научная деятельность</a></li>
+        <li><a href="#"{{#ifpage 'education-item'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#page"></use></svg></i>Методическая работа</a></li>
+        <li><a href="#"{{#ifpage 'additional'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></i>Внеучебная деятельность</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+<!--//Портфолио-->
+{{/ifpage}}
+
+{{#ifpage 'vacation' 'dashboard2' 'users2' 'users-structure' 'order' 'responsibility' 'structure' 'reference' 'reference-history' 'staff' 'docs' 'it-docs' 'it-order' 'it-order-current' 'profile2' 'alerts' 'alerts-new'}}
+<!--Юзер-->
+<section class="section">
+  <a href="#" class="profile-card">
+    <div class="profile-card__image">
+      <img src="{{root}}assets/img/dude-3.png" alt="Гальчич Максим Александрович">
+    </div>
+    <div class="profile-card__content">
+      <span class="profile-card__name"><span class="surname">Гальчич</span> <span class="firstname">Максим</span> <span class="lastname">Александрович</span></span>
+      <span class="profile-card__desc">Управление информационных систем и технологий</span>
+    </div>
+  </a>
+</section>
+<!--//Юзер-->
+
+<!--Мой профиль-->
+<section class="section">
+  <h5 class="section-title">Мой профиль</h5>
+  <nav class="menu-sidebar">
+    <ul class="menu">
+      <li><a href="#"{{#ifpage 'dashboard'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#network"></use></svg></i>Дашборд</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#gear"></use></svg></i>Редактировать профиль</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#bell"></use></svg></i>Уведомления<span class="label round alert">1</span></a></li>
+      {{!--<li><a href="#"{{#ifpage 'blog'}} class="is-active{{/ifpage}}"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#pencil-1"></use></svg></i>Написать в&nbsp;блог</a></li>--}}
+    </ul>
+  </nav>
+</section>
+<!--//Мой профиль-->
+
+<!--Сервисы-->
+<section class="section">
+  <h5 class="section-title">Сервисы</h5>
+  <nav class="menu-sidebar">
+    <ul class="menu">
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#page"></use></svg></i>Расчетный лист</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#time"></use></svg></i>Эффективность</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#checklist"></use></svg></i>Заказ справок</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#calendar"></use></svg></i>Бронирование</a></li>
+      <li><a href="#"><i class="menu-icon menu-icon--large"><svg viewbox="0 0 32 32"><use xlink:href="#app"></use></svg></i>Мат. ответственность</a></li>
+    </ul>
+  </nav>
+</section>
+<!--//Сервисы-->
+{{/ifpage}}

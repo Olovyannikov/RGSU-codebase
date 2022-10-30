@@ -1,0 +1,88 @@
+section.prepare-2
+    .prepare-2__container.container
+        h2.title.prepare-2__title Подготовка к занятию ""
+        ul.breadcrumbs
+            li.breadcrumbs__item
+                a(href='/').breadcrumbs__link виды двигательной деятельности
+            li.breadcrumbs__item
+                a(href='/').breadcrumbs__link цикличные
+            li.breadcrumbs__item
+                a(href='run.html').breadcrumbs__link бег
+            li.breadcrumbs__item
+                a().breadcrumbs__link.breadcrumbs__link_current тест
+
+        .prepare-2__wrapper.wrapper
+            .prepare-content
+                p.prepare-content__descr
+                    | Выполните следущие пробы, чтобы определить Ваш уровень подготовки. В зависимост от Ваших резултьтатов, сложность и продолжительность заданий будет отличаться.
+
+                .prepare-content__disclaimer
+                    p
+                        b При наличии противопоказаний
+                    p С осторожностью (ограничено) должны использоваться продолжительные физические нагрузки средней интенсивности, физические упражнения, направленные на развитие общей и локальной выносливости, скоростно-силовых качеств; физические упражнения, вызывающие нервное перенапряжение; упражнения, сопровождающиеся значительным сотрясением тела; круговые движения головой, наклоны головы.
+                    p Среднеэнергозатратные физические нагрузки (ходьба, скандинавская ходьба, езда на велосипеде, катания на коньках и роликах, йога, подвижные игры и развлечения, настольный теннис) приведены в приложении 1.
+            .prepare-content.prepare__test
+                h3.prepare-content__title Проба Штанге
+                    span (задержка дыхания на вдохе)
+                hr
+                ul.prepare__list
+                    li.prepare__list-item
+                        p.prepare__list-title
+                            b До основного тестирования необходимо измерить пульс за 30 секунд в положении стоя.
+                        .prepare__list-container
+                            input(type='text')
+                            button.btn запустить таймер
+                            span.prepare__time 00:30
+                    li.prepare__list-item
+                        p Сядьте. После короткого отдыха сидя сделайте 2-3 глубоких, полных вдоха и выдоха, а затем, сделав спокойный вдох примерно на 2/3 от полного, задержите дыхание.
+                        p Нос лучше зажать пальцами (или спортивным зажимом для плавания). Время отмечается от момента задержки дыхания до её прекращения.
+                        p Время отмечается от момента задержки дыхания до её прекращения.
+                        .prepare__list-container
+                            button.btn.green начать отсчет
+                            span.prepare__time 00:00
+                    li.prepare__list-item
+                        p.prepare__list-title
+                            b Сразу после возобновления дыхания подсчитайте пульс за 30 секунд
+                        .prepare__list-container
+                            input(type='text')
+                            button.btn запустить таймер
+                            span.prepare__time 00:30
+
+            .prepare-content.prepare__test
+                h3.prepare-content__title Гарвардский степ-тест
+                hr
+                ul.prepare__list
+                    li.prepare__list-item
+                        p.prepare__list-title
+                            b До основного тестирования необходимо измерить пульс за 30 секунд в положении стоя.
+                        .prepare__list-container
+                            input(type='text')
+                            button.btn запустить таймер
+                            span.prepare__time 00:30
+                    li.prepare__list-item
+                        p В течение 5 минут необходимо непрерывно делать "восхождение" на степ. <br> Темп достаточно быстрый - 30 восхождений в мин.
+                        p Если 5 минут выполнять упражнение невозможно, засекаем, сколько времени осталось.
+                        .prepare__complex
+                            p Последовательность действий:
+                            p 1) одна нога поставлена на степ;
+                            p 2) обе ноги на степ;
+                            p 3) одна нога на полу;
+                            p 4) обе ноги на полу.
+                            img(src='img/icons/step.svg' aria-hidden='true')
+                        .prepare__list-container
+                            button.btn.green начать отсчет
+                            span.prepare__time.prepare__time_big 05:00
+                    li.prepare__list-item
+                        p
+                            b Сразу после возобновления дыхания подсчитайте пульс за 30 секунд
+                        .prepare__list-container
+                            button.btn запустить таймер
+                            span.prepare__time 00:30
+                        .prepare__list-container
+                            label Пульс через минуту
+                                input(type='text')
+                            label Пульс через 2 минуты
+                                input(type='text')
+                            label Пульс через 3 минуты
+                                input(type='text')
+            button.btn.green определить уровень

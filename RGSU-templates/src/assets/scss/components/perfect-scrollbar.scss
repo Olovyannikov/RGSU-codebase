@@ -1,0 +1,162 @@
+/* perfect-scrollbar v0.7.0 */
+$ps-rail-color: $light-gray;
+$ps-bar-color: rgba($primary-color, 0.75);
+$ps-rail-offset: 10px;
+$ps-rail-width: 2px;
+$ps-rail-width-active: 5px;
+$ps-bar-radius: 0;//3px;
+
+.ps {
+  position: relative;
+  -ms-touch-action: auto;
+  touch-action: auto;
+  overflow: hidden !important;
+  -ms-overflow-style: none;
+  & > &__scrollbar-x-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 1;
+    transition: background-color .2s linear, opacity .2s linear;
+    bottom: 0;//$ps-rail-offset;
+    /* there must be 'bottom' for ps__scrollbar-x-rail */
+    height: $ps-rail-width;
+    > .ps__scrollbar-x {
+      position: absolute;
+      /* please don't change 'position' */
+      background-color: $ps-bar-color;
+      transition: background-color .2s linear, height .2s linear, right .2s ease-in-out, width .2s ease-in-out, border-radius .2s ease-in-out, -webkit-border-radius .2s ease-in-out, -moz-border-radius .2s ease-in-out;
+      bottom: 0;//$ps-rail-offset;
+      /* there must be 'bottom' for ps__scrollbar-x */
+      height: $ps-rail-width;
+    }
+    &:hover > .ps__scrollbar-x,
+    &:active > .ps__scrollbar-x {
+      height: $ps-rail-width-active;
+    }
+  }
+  & > &__scrollbar-y-rail {
+    display: none;
+    position: absolute;
+    /* please don't change 'position' */
+    opacity: 1;
+    transition: background-color .2s linear, opacity .2s linear;
+    right: 0;
+    /* there must be 'right' for ps__scrollbar-y-rail */
+    width: $ps-rail-width;
+    border-radius: $ps-bar-radius;
+    > .ps__scrollbar-y {
+      position: absolute;
+      /* please don't change 'position' */
+      background-color: $ps-bar-color;
+      transition: background-color .2s linear, height .2s linear, right .2s ease-in-out, width .2s ease-in-out, border-radius .2s ease-in-out;
+      right: 0;
+      /* there must be 'right' for ps__scrollbar-y */
+      width: $ps-rail-width;
+    }
+  }
+  &--active-x {
+    padding-bottom: $ps-rail-offset;
+    > .ps__scrollbar-x-rail {
+      display: block;
+      background-color: $ps-rail-color;
+    }
+  }
+  &--active-y {
+    padding-right: $ps-rail-offset;
+    > .ps__scrollbar-y-rail {
+      display: block;
+      background-color: $ps-rail-color;
+    }
+  }
+  &--in-scrolling {
+    .ps {
+      &--x {
+        > .ps__scrollbar-x-rail {
+          background-color: rgba($ps-rail-color, 0.5);
+          > .ps__scrollbar-x {
+            background-color: $ps-rail-color;
+            height: $ps-rail-width;
+          }
+        }
+      }
+      &--y {
+        > .ps__scrollbar-y-rail {
+          background-color: rgba($ps-rail-color, 0.5);
+          > .ps__scrollbar-y {
+            background-color: $ps-rail-color;
+            width: $ps-rail-width;
+          }
+        }
+      }
+    }
+  }
+  &:active {
+    .ps {
+      &__scrollbar-x {
+        height: $ps-rail-width-active;
+      }
+      &__scrollbar-y {
+        width: $ps-rail-width-active;
+      }
+    }
+  }
+  &:hover {
+    .ps {
+      &__scrollbar-x {
+        height: $ps-rail-width-active;
+      }
+      &__scrollbar-y {
+        width: $ps-rail-width-active;
+      }
+      &__scrollbar-x-rail {
+        height: $ps-rail-width-active;
+        &:hover {
+          background-color: rgba($ps-rail-color, 0.5);
+          > .ps__scrollbar-x {
+            background-color: $ps-bar-color;
+          }
+        }
+      }
+      &__scrollbar-y-rail {
+        width: $ps-rail-width-active;
+        &:hover {
+          background-color: rgba($ps-rail-color, 0.5);
+          > .ps__scrollbar-y {
+            background-color: $ps-bar-color;
+          }
+        }
+      }
+      
+      &--in-scrolling {
+        .ps {
+          &--x > .ps__scrollbar-x-rail {
+            background-color: rgba($ps-rail-color, 0.5);
+            > .ps__scrollbar-x {
+              background-color: $ps-bar-color;
+              height: 11px;
+            }
+          }
+          &--y > .ps__scrollbar-y-rail {
+            background-color: rgba($ps-rail-color, 0.5);
+            > .ps__scrollbar-y {
+              background-color: $ps-bar-color;
+              width: 11px;
+            }
+          }
+        }
+      }
+      
+    }
+  }
+}
+@supports (-ms-overflow-style: none) {
+  .ps {
+    overflow: auto !important;
+  }
+}
+@media screen and (-ms-high-contrast: active), (-ms-high-contrast: none) {
+  .ps {
+    overflow: auto !important;
+  }
+}

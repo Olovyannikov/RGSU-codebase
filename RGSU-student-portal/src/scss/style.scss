@@ -1,0 +1,98 @@
+@import "vendor/normalize.scss";
+@import "vendor/flags.scss";
+@import "vendor/swiper.scss";
+@import "vendor/dataTable.scss";
+@import "general/rem-calc";
+@import "general/variables.scss";
+@import "general/mixins.scss";
+@import "general/fonts.scss";
+@import "general/scaffolding.scss";
+@import "general/mixes";
+@import "general/btn";
+@import "general/cookie";
+@import "general/tabs";
+@import "blocks/block-content";
+@import "general/tooltips";
+@import "blocks/accordeon";
+
+//global
+@import "blocks/page-header";
+@import "blocks/login";
+@import "blocks/modal";
+@import "blocks/footer";
+@import "blocks/social-block";
+
+//index
+@import "blocks/enter";
+@import "blocks/info";
+@import "blocks/portfolio";
+@import "blocks/classmates";
+@import "blocks/announcement";
+@import "blocks/services";
+@import "blocks/ads";
+@import "blocks/slider";
+@import "blocks/faq";
+@import "blocks/news";
+@import "blocks/banner";
+@import "blocks/portfolio-tabs";
+@import "blocks/partners";
+
+//digital-portfolio
+
+@import "blocks/portfolio-cards";
+@import "blocks/card";
+@import "blocks/achievements";
+@import "blocks/filter";
+@import "blocks/two-ranged-slider";
+@import "blocks/pagination";
+@import "blocks/select";
+
+//digital-profile
+
+@import "blocks/profile";
+@import "blocks/activities";
+@import "blocks/extra-info";
+@import "blocks/employments";
+@import "blocks/about";
+@import "blocks/languages";
+@import "blocks/reccomendations";
+@import "blocks/study-work";
+@import "blocks/science-work";
+@import "blocks/outstudy-work";
+@import "blocks/international-work";
+@import "blocks/progress-bar";
+@import "blocks/table";
+@import "blocks/similar-profiles";
+
+//vacancy
+@import "blocks/vacancy";
+
+//news
+@import "blocks/student-news";
+
+//new-section
+@import "blocks/new-section";
+
+//children
+@import "blocks/my-children";
+
+//parent-cabinet
+@import "blocks/parent-cabinet";
+@import "blocks/finance";
+@import "blocks/schedule";
+@import "vendor/fullcalendar";
+
+//moderator
+@import "blocks/moderator";
+
+//dashboard
+@import "blocks/dashboard";
+@import "blocks/stories";
+@import "blocks/settings";
+@import "blocks/parents-list";
+@import "blocks/hotels";
+@import "blocks/request";
+
+main > section:first-child {
+    @media(min-width: $tablet) {padding-top: 25px;
+}}

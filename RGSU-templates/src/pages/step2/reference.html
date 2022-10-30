@@ -1,0 +1,79 @@
+---
+title: Заказ справок
+layout: sidebar-left
+sidebar: left
+step: 2
+---
+<!--//Заказ справок-->
+<section class="section">
+  <div class="card card--large-stack">
+    <div class="card-section">
+      <ul class="tabs" data-tabs id="example-tabs" role="tablist">
+        <li class="tabs-title is-active" role="presentation"><a href="#panel1" aria-selected="true">Форма заказа</a></li>
+        <li class="tabs-title" role="presentation"><a href="#panel2" aria-selected="false">История</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          {{> form-reference}}
+        </div>
+        <div class="tabs-panel" id="panel2">
+          <ul class="accordion" data-accordion>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Заявка №3279 от 14.02.2019</a>
+              <span class="pseudo-button small hollow medium-gray margin-0">В процессе</span>
+              <div class="accordion-content" data-tab-content>
+                <div class="table-scroll">
+                  <table class="hover margin-0">
+                    <tbody>
+                      <tr>
+                        <td>Тип справки: 2-НДФЛ</td>
+                        <td>Год: 2019</td>
+                        <td>Количество: 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Заказ №2457 от 05.12.2017</a>
+              <span class="pseudo-button small hollow success margin-0">Исполнено</span>
+              <div class="accordion-content" data-tab-content>
+                <div class="table-scroll">
+                  <table class="hover margin-0">
+                    <tbody>
+                      <tr>
+                        <td>Тип справки: 2-НДФЛ</td>
+                        <td>Год: 2019</td>
+                        <td>Количество: 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+            <li class="accordion-item" data-accordion-item>
+              <a href="#" class="accordion-title">Заказ №3147 от 09.01.2019</a>
+              <span class="pseudo-button small hollow alert margin-0">Отклонено</span>
+              <div class="accordion-content" data-tab-content>
+                <div class="table-scroll">
+                  <table class="hover margin-0">
+                    <tbody>
+                      <tr>
+                        <td>Тип справки: 2-НДФЛ</td>
+                        <td>Год: 2019</td>
+                        <td>Количество: 3</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</section>
+<!--//Заказ справок-->

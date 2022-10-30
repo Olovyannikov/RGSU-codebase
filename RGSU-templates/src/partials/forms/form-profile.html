@@ -1,0 +1,115 @@
+<form class="form form-profile">
+  <fieldset>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-8">
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-4">
+            <div class="field">
+              <label for="profile-lastname">Фамилия</label>
+              <input type="text" id="profile-lastname" value="Гальчич" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell medium-4">
+            <div class="field">
+              <label for="profile-firstname">Имя</label>
+              <input type="text" id="profile-firstname" value="Максим" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell medium-4">
+            <div class="field">
+              <label for="profile-surname">Отчество</label>
+              <input type="text" id="profile-surname" value="Александрович">
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="profile-email">Email</label>
+              <input type="email" id="profile-email" value="GalchichMA@rgsu.net" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="profile-phone">Телефон</label>
+              <input type="tel" class="phone-mask" id="profile-phone" value="1017" data-xp="required: true">
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="profile-snils">СНИЛС</label>
+              <input type="text" id="profile-snils" value="111-222-33 44" data-inputmask="'mask': '999-999-99 99'">
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="profile-birthdate">Дата рождения</label>
+              <input type="text" id="profile-birthdate" value="05.05.1987" data-date-picker data-inputmask="'mask': '99.99.9999'">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="cell large-4">
+        <div class="field">
+          <div class="image-upload">
+            <label for="profile-image-new" class="image-upload__picture" title="Загрузить новое фото">
+              <img src="{{root}}assets/img/dude-3.png">
+              <span class="image-upload__overlay">
+                <span class="image-upload__remove" title="Удалить фото"><svg viewbox="0 0 32 32"><use xlink:href="#cancel"></use></svg></span>
+                <span class="image-upload__icon"><svg viewbox="0 0 32 32"><use xlink:href="#pencil-1"></use></svg></span>
+              </span>
+            </label>
+            <span class="image-upload__desc">* требования к файлу:<br>1) формат JPG, PNG<br>2) не более 2 МБ</span>
+            <div class="image-upload__file">
+              <input type="file" id="profile-image-new">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-8">
+        <div class="field">
+          <label for="profile-department">Подразделение</label>
+          <input type="text" id="profile-department" value="Управление информационных проектов" data-xp="required: true">
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell large-8">
+        <div class="field">
+          <label for="profile-position">Должность</label>
+          <input type="text" id="profile-position" value="Начальник управления" data-xp="required: true">
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x">
+      <div class="cell">
+        <div class="field options">
+          <div class="selector switch">
+            <div class="pretty p-switch">
+              <input type="checkbox" id="addexperience-public"/>
+              <div class="state p-success">
+                <label for="addexperience-public">Публичная запись</label>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="grid-x grid-margin-x margin-top-1">
+      <div class="cell large-8">
+        <div class="grid-x margin-x align-justify">
+          <div class="cell shrink">
+            <input type="submit" class="button" value="Сохранить">
+          </div>
+          <div class="cell shrink">
+            <input type="reset" class="hollow medium-gray button" value="Отменить">
+          </div>
+        </div>
+      </div>
+    </div>
+  </fieldset>
+</form>

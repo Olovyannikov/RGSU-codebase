@@ -1,0 +1,334 @@
+.dashboard__main-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    .progress--circle {
+        width: 162px;
+        height: 162px;
+        img {
+            width: unset;
+            height: unset;
+        }
+    }
+    .progress__wrapper {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 22px;
+    }
+    .progress {
+        order: 2;
+        margin-left: 0;
+    }
+    .progress-info {
+        order: 1;
+        margin-left: 0;
+    }
+    .card__progress {
+        margin-bottom: 12px;
+    }
+    .card__name {
+        width: 192px;
+    }
+    .card__faculty {
+        font-size: 14px;
+        line-height: 21px;
+        color: $c-darkgrey;
+        text-transform: unset;
+        width: 181px;
+    }
+}
+
+.dashboard {
+    position: relative;
+    .dashboard__container {
+        @media (min-width: $tablet) {
+            max-width: 1440px;
+        }
+    }
+
+    .advertisement__container {
+        padding: 0;
+    }
+    .block {
+        @media (min-width: $tablet) {
+            width: 487px;
+        }
+    }
+    .slider__item-descr--wide {
+        @media (min-width: $tablet) {
+            display: none;
+        }
+    }
+}
+
+.dashboard__aside {
+    position: absolute;
+    transform: translateX(-200%);
+    padding: 27px 0 0;
+    transition: 0.5s;
+    top: -27px;
+    z-index: 999;
+    &--active {
+        left: 0;
+        background: $c-grey;
+        width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        padding-bottom: 100vh;
+        transform: translateX(0);
+        z-index: 11;
+    }
+    @media (min-width: 1296px) {
+        width: 100%;
+        position: static;
+        transform: translateX(0);
+        max-width: 280px;
+        &--short {
+            max-width: 68px;
+            z-index: 1;
+            .card__name,
+            .card__faculty,
+            .progress__wrapper {
+                display: none;
+            }
+            .progress--circle {
+                width: 62px;
+                height: 62px;
+            }
+        }
+    }
+}
+
+//menu style
+
+.dashboard__menu {
+    width: 100%;
+}
+
+.dashboard__menu-wrapper {
+    margin-bottom: 19px;
+    background: $c-grey;
+    z-index: 9999;
+}
+
+.dashboard__menu-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    cursor: pointer;
+    transition: 0.2s;
+
+    z-index: 2;
+    &:hover {
+        .dashboard__menu-title {
+            color: $c-blue;
+        }
+        .divider {
+            border-color: $c-blue;
+            transition: 0.2s;
+        }
+        .dashboard__menu-button {
+            border-color: $c-blue;
+            background: $c-blue;
+            svg {
+                fill: $c-light;
+            }
+        }
+    }
+}
+
+.dashboard__menu-title {
+    white-space: nowrap;
+    margin-right: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+    transition: 0.2s;
+}
+
+.dashboard__menu-button {
+    @include btn-reset;
+    font-size: 0;
+    border: 1px solid #e4ecfa;
+    box-sizing: border-box;
+    border-radius: 50%;
+    min-width: 32px;
+    height: 32px;
+    transition: 0.2s;
+    svg {
+        fill: #9cbaf0;
+        transition: 0.2s;
+    }
+    &--active {
+        transform: rotate(180deg);
+    }
+}
+
+.dashboard__menu-list {
+    @include list-reset;
+    flex-direction: column;
+    display: none;
+    justify-content: space-between;
+    &--active {
+        display: flex;
+    }
+}
+
+.dashboard__menu-item {
+    box-sizing: border-box;
+    position: relative;
+    margin-bottom: 19px;
+    z-index: 9999;
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.dashboard__menu-link {
+    border: 1px solid transparent;
+    border-radius: 4px;
+    background: $c-light;
+    display: flex;
+    align-items: center;
+    padding-left: 71px;
+    font-size: 16px;
+    line-height: 26px;
+    color: $c-title;
+    padding-top: 21px;
+    padding-bottom: 21px;
+    transition: 0.2s;
+    svg {
+        position: absolute;
+        display: block;
+        fill: $c-darkgrey;
+        left: 17px;
+    }
+    &:hover {
+        background-color: $c-blue;
+        border: 1px solid transparent;
+        svg {
+            fill: $c-light;
+        }
+        color: $c-light;
+    }
+    &--active {
+        border: 1px solid $c-blue;
+        color: $c-light;
+        background-color: $c-blue;
+        svg {
+            fill: $c-light;
+        }
+        &:visited {
+            color: $c-light;
+            &:hover {
+                color: $c-light;
+            }
+        }
+    }
+    &--short {
+        font-size: 0;
+        width: 68px;
+        position: relative;
+    }
+}
+
+.dashboard__notification-counter {
+    text-align: center;
+    font-size: rem-calc(15);
+    color: $c-light;
+    width: 23px;
+    height: 23px;
+    background-color: $c-red;
+    border-radius: 50%;
+    margin-left: 11px;
+    & {
+        position: absolute;
+        top: -10px;
+        right: -10px;
+    }
+}
+
+.dashboard__main-content {
+    margin-top: 34px;
+    display: flex;
+    justify-content: center;
+    width: calc(100% - 280px);
+    flex-wrap: wrap;
+    flex-grow: 1;
+    z-index: 1;
+    @media (min-width: $tablet) {
+        section {
+            width: 100%;
+        }
+        .container {
+            padding: 0;
+        }
+    }
+    .portfolio__container {
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 340px;
+            flex-grow: 1;
+        }
+    }
+    .classmates__wrapper {
+        background-color: #fff;
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 340px;
+            flex-grow: 1;
+        }
+    }
+    .classmates__list {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        position: relative;
+        justify-content: flex-start;
+        overflow-y: scroll;
+        width: 100%;
+        @media (min-width: $tablet) {
+            overflow-y: unset;
+        }
+    }
+    .classmates__list-wrapper {
+        overflow-y: unset;
+        width: 90%;
+        display: flex;
+        justify-content: center;
+        margin: 0 auto;
+        @media (min-width: $tablet) {
+            overflow-y: scroll;
+            display: block;
+        }
+    }
+    .card {
+        align-items: flex-start;
+        padding-top: 0;
+        &--stack {
+            min-height: 300px;
+        }
+    }
+}
+
+.dashboard__info {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    width: 100%;
+    margin-bottom: 20px;
+    @media (min-width: $tablet) {
+        flex-direction: row;
+        flex-wrap: unset;
+        width: 100%;
+        justify-content: space-between;
+        gap: 10px;
+    }
+    .info__card-block {
+        height: fit-content;
+        width: 100%;
+        @media (min-width: $tablet) {
+            width: 340px;
+            flex-grow: 1;
+        }
+    }
+}

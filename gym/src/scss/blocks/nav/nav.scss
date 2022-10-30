@@ -1,0 +1,162 @@
+.nav__list {
+  @include list-reset;
+  position: fixed;
+  transition: .6s;
+  top: 80px;
+  left: -100%;
+  padding-top: 40px;
+  background: #fff;
+  height: 100vh;
+  padding-bottom: 5%;
+  padding-left: 25px;
+  box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+  @media (max-width: 1439px) {
+    width: 95%;
+    padding-left: 5%;
+  }
+  @media (min-width: 1439px) {
+    padding-left: 5%;
+    width: 40%;
+  }
+  @media (min-width: 1880px) {
+    padding-left: 10%;
+  }
+
+  &_active {
+    left: 0;
+    overflow: scroll;
+    .nav__link {
+      left: 0;
+      transition: 1s;
+    }
+    &::-webkit-scrollbar {
+      appearance: none;
+    }
+  }
+}
+
+.nav__link {
+  transition: .5s;
+  font-size: 18px;
+  line-height: 21.6px;
+  text-transform: uppercase;
+  font-weight: bold;
+  color: #000;
+  display: block;
+  max-width: 100%;
+  position: relative;
+  left: -100%;
+  margin-bottom: 20px;
+
+  &_hasSubMenu {
+    position: relative;
+
+    svg {
+      position: absolute;
+      top: 0;
+      right: 10%;
+      transition: .3s;
+    }
+  }
+}
+
+/* Submenu */
+
+.nav__submenu {
+  @include list-reset;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 200ms linear, max-height 200ms linear;
+  will-change: opacity, max-height;
+}
+
+.nav__link_active {
+  svg {
+    transform: rotate(90deg);
+  }
+
+  + .nav__submenu {
+    margin-top: 20px;
+    opacity: 1;
+    max-height: 100%;
+    transition: all 200ms linear;
+    will-change: opacity, max-height;
+  }
+}
+
+.nav__submenu-item {
+  margin-bottom: 60px;
+  &:last-child {
+    margin-bottom: 30px;
+  }
+  &:first-child {
+    text-transform: lowercase;
+  }
+}
+
+.nav__submenu-sex {
+  display: flex;
+  gap: 20px;
+}
+
+.nav__submenu-label {
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav__submenu-input {
+  background: transparent;
+  border: 1px solid black;
+}
+
+.nav__submenu-radio {
+  display: none;
+}
+
+/* Custom radio */
+
+.nav__submenu-element {
+  order: -1;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: absolute;
+  left: -18px;
+  top: 3px;
+}
+
+.nav__submenu-radio:checked + .nav__submenu-element {
+  &::after {
+    position: absolute;
+    content: '';
+    display: block;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: #000;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+
+.nav__submenu-age {
+  margin-top: 12px;
+  display: flex;
+  gap: 20px;
+
+  input {
+    width: 15%;
+  }
+}
+
+.nav__submenu-sport {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}

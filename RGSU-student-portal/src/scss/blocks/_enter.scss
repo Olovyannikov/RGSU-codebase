@@ -1,0 +1,71 @@
+.enter {
+  padding-bottom: 32px;
+  padding-top: 37px;
+  display: none;
+  background: $c-blue-background;
+  @media (min-width: $mobile) {
+    display: block;
+  }
+  @media (min-width: $tablet) {
+    padding-bottom: 66px;
+  }
+}
+
+.enter__wrapper {
+  position: relative;
+  margin: 0 auto;
+  max-width: calc(1440px - 90px);
+  h1 {
+    visibility: hidden;
+    font-size: 0;
+    height: 0;
+    width: 0;
+    @media (min-width: 768px) {
+      visibility: visible;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 34px;
+      line-height: 39px;
+      color: white;
+      margin: 0;
+      width: 388px;
+      position: absolute;
+      height: auto;
+      top: 52px;
+      left: 37px;
+    }
+  }
+}
+
+.enter__button {
+  width: 100%;
+  padding: 10px 0;
+
+  @media (min-width: 768px) {
+    position: absolute;
+    width: 236px;
+    bottom: 51px;
+    left: 37px;
+    transition: all .5s;
+  }
+}
+
+.enter__background {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  max-height: 300px;
+  object-fit: cover;
+  object-position: 0 60%;
+  border-radius: 4px;
+}
+
+.enter__subtitle {
+  position: absolute;
+  font-size: rem-calc(20);
+  line-height: 28px;
+  top: 111px;
+  left: 37px;
+  color: $c-light;
+  margin: 0;
+}

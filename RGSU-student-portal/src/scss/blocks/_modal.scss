@@ -1,0 +1,338 @@
+.modal__login {
+    display: none;
+    position: absolute;
+    z-index: 1000;
+    left: 50%;
+    margin-left: -200px;
+    width: 411px;
+    height: auto;
+    animation: fadeIn .5s;
+    @media (max-width: 470px) {
+        width: 90%;
+        margin-left: 0px;
+        transform: translateX(-50%);
+    }
+}
+
+.modal--active {
+    display: block;
+}
+
+.modal-close {
+    @include btn-reset;
+    font-size: 0;
+    position: absolute;
+    content: "";
+    display: block;
+    border: 1px solid #c3cad6;
+    box-sizing: border-box;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    top: 12px;
+    right: 12px;
+    border-radius: 50%;
+    transition: 0.5s;
+    &::after,
+    &::before {
+        position: absolute;
+        width: 15px;
+        height: 1px;
+        content: "";
+        display: block;
+        transform: rotate(45deg);
+        background-color: #c3cad6;
+        right: 7px;
+    }
+    &::after {
+        transform: rotate(-45deg);
+        animation: rotateToX 1.5s ease-in-out;
+    }
+    &::before {
+        animation: rotateToY 1.5s ease-in-out;
+    }
+    &:hover {
+        background-color: $c-blue;
+        transform: rotate(360deg);
+        border: none;
+        &::after,
+        &::before {
+            background: $c-light;
+            right: 8px;
+        }
+    }
+}
+
+.modal__title {
+    font-style: normal;
+    font-weight: normal;
+    font-size: 26px;
+    line-height: 26px;
+    color: $c-black;
+    text-align: center;
+    margin-top: 38px;
+    margin-bottom: 21px;
+}
+
+.modal__form {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-bottom: 30px;
+}
+
+.form__label {
+    display: block;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 26px;
+    color: #444444;
+    margin-bottom: 6px;
+    &::after {
+        content: " *";
+        color: #e06364;
+    }
+}
+
+.form__input {
+    border: 1px solid #f1f4f9;
+    box-sizing: border-box;
+    border-radius: 4px;
+    width: 100%;
+    padding: 9px 63px 9px 15px;
+    height: 46px;
+    &::placeholder,
+    &:placeholder-shown {
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 26px;
+        color: #c3cad6;
+    }
+    &:placeholder-shown {
+        padding: 9px 63px 9px 15px;
+    }
+}
+
+.modal__form-group {
+    margin-bottom: 30px;
+    &--mail {
+        margin-bottom: 12px;
+    }
+    &--password {
+        position: relative;
+    }
+}
+
+.modal__checkbox-show {
+    position: absolute;
+    width: 15px;
+    height: 15px;
+
+    fill: rgba(#008ed6, 50%);
+
+    .closed-eye {
+        opacity: 0;
+        height: 0;
+    }
+}
+
+.modal__control-label--showpassword {
+    width: 32px;
+    text-align: right;
+    cursor: pointer;
+    position: absolute;
+    right: 30px;
+    top: 48px;
+}
+
+.modal__form-show {
+    display: none;
+    &:checked {
+        & ~ .form__input {
+            &--password {
+                text-security: disc;
+                -webkit-text-security: disc;
+            }
+        }
+        & ~ .modal__control-label--showpassword {
+            .modal__checkbox-show {
+                .closed-eye {
+                    opacity: 1;
+                    transition: opacity 300ms ease, height 400ms ease;
+                    width: 4px;
+                    height: 44px;
+                }
+            }
+        }
+    }
+}
+
+.modal__buttons {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    label {
+        font-size: 16px;
+        line-height: 26px;
+        color: #C3CAD6;
+        margin-top: 32px;
+        margin-bottom: 6px;
+    }
+}
+
+.modal__enter {
+    width: 100%;
+}
+
+.modal__sber {
+    width: 100%;
+    text-align: center;
+    display: block;
+    height: 46px;
+    border: 1px solid #2bc584;
+    box-sizing: border-box;
+}
+
+.modal__error {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    text-align: center;
+    color: $c-darkgrey;
+    transition: 0.2s;
+    position: relative;
+    padding-bottom: 0;
+    &:hover {
+        color: $c-blue;
+    }
+}
+
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 0;
+        stroke-dasharray: 150.6 100.4;
+    }
+    50% {
+        stroke-dasharray: 1 250;
+    }
+    100% {
+        stroke-dashoffset: 502;
+        stroke-dasharray: 150.6 100.4;
+    }
+}
+
+@keyframes spinner-in {
+    0% {
+        opacity: 0;
+    }
+    20%,
+    80% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+//plugin
+
+.modal {
+    --transition-time: 0.3s;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1000;
+    cursor: pointer;
+    overflow-y: auto;
+    overflow-x: hidden;
+    text-align: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity var(--transition-time), visibility var(--transition-time);
+
+}
+
+.modal::before {
+    content: '';
+    display: inline-block;
+    vertical-align: middle;
+    height: 100%;
+}
+
+.modal__container {
+    position: relative;
+    width: auto;
+    height: auto;
+    margin: 50px auto;
+    display: none;
+    vertical-align: middle;
+    cursor: default;
+    text-align: left;
+    @extend .card--stack
+}
+
+@media (max-width: 1024px) {
+    .modal__container {
+        width: 90%;
+    }
+}
+
+.modal.is-open {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity var(--transition-time), visibility var(--transition-time);
+}
+
+.modal__container.modal-open {
+    display: block;
+    position: absolute;
+    width: auto;
+    height: auto;
+    top: 0;
+    left: 50%;
+    z-index: 1001;
+    padding: 40px 20px;
+
+    transform: translateX(-50%);
+}
+
+.modal-open {
+    .modal {
+        opacity: 1;
+    }
+}
+
+.fade {
+    opacity: 0;
+    transition: opacity var(--transition-time);
+}
+
+.fade.animate-open {
+    opacity: 1;
+    transition: opacity var(--transition-time);
+}
+
+.fadeInUp {
+    opacity: 0;
+    transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.fadeInUp.animate-open {
+    opacity: 1;
+    transition: opacity var(--transition-time), transform var(--transition-time);
+}
+
+.disable-scroll {
+    overflow: hidden;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+}

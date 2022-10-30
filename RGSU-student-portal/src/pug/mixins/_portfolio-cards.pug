@@ -1,0 +1,15 @@
+mixin portfolio-card( img, username, faculty, education, age, course, progress, href='#')
+    - img=typeof img != ('undefined' || '') ? img : "avatar-not-found.svg"
+    article.portfolio-cards.card
+        .card__progress
+            .progress--circle(data-progress=progress)
+                picture.card__avatar
+                    img(max-width='130' loading="lazy" src="img/" + (img == '' ? "avatar-not-found.svg" : img), alt=username)
+        p.card__name #{username}
+        p.card__faculty #{faculty}
+        p.card__education #{education}
+        p.card__info
+            span.card__info-age Возраст: #{age}
+            span.card__info-course #{course} курс
+        .card__achievements.achievements
+            block

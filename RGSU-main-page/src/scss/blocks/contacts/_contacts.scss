@@ -1,0 +1,30 @@
+.contacts {
+    padding-bottom: 50px;
+    padding-top: 40px;
+    @media (min-width: $tablet) {
+        padding-top: 40px;
+        padding-bottom: 68px;
+    }
+}
+
+.contacts__title {
+    margin-bottom: 3px;
+}
+
+.contacts__address {
+    font-weight: bold;
+    font-style: normal;
+    margin: 0;
+    font-size: rem-calc(14);
+    line-height: rem-calc(19.32);
+}
+
+.contacts__descr {
+    display: block;
+    font-size: rem(14);
+    line-height: rem-calc(19.32);
+}
+
+.contacts__tel-link {
+    color: $c-black-0;
+}

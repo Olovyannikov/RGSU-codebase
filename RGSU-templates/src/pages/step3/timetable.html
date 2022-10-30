@@ -1,0 +1,331 @@
+---
+title: Расписание занятий
+layout: timetable
+step: 3
+---
+<section class="section">
+  <div class="card card--stack">
+    <div class="card-section">
+      <ul class="tabs hide-for-print" data-tabs id="timetable-tabs">
+        <li class="tabs-title is-active"><a href="#panel1" aria-selected="true"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#calendar"></use></svg></span>Расписание занятий</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel2" href="#panel2"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#user"></use></svg></span>Расписание преподавателей</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel3" href="#panel3"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Загруженность аудиторий</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel4" href="#panel4"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 4</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel5" href="#panel5"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 5</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel6" href="#panel6"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 6</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel7" href="#panel7"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 7</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel8" href="#panel8"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 8</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel9" href="#panel9"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 9</a></li>
+        <li class="tabs-title"><a data-tabs-target="panel10" href="#panel10"><span class="tabs-title__icon"><svg viewbox="0 0 32 32"><use xlink:href="#layers"></use></svg></span>Панель 10</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="timetable-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <!--Расписание занятий-->
+
+          <form class="form form-timetable hide-for-print">
+            <div class="grid-x align-center">
+              <div class="cell large-10">
+                <fieldset class="form-timetable-search">
+                  <input type="search" placeholder="Поиск по группе"/>
+                  <button type="button"><svg viewbox="0 0 32 32"><use xlink:href="#search"></use></svg></button>
+                </fieldset>
+                <fieldset class="form-timetable-filter">
+                  <div class="button-group large-justify-center">
+                    <button type="button" class="round primary button">24.03. 2020 - 01.04. 2020</button>
+                    <button type="button" class="round light-gray button">02.04. 2020 - 08.04. 2020</button>
+                    <button type="button" class="round light-gray button">09.04. 2020 - 16.04. 2020</button>
+                    <button type="button" class="round light-gray button">17.04. 2020 - 25.04. 2020</button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+          <div class="grid-x align-justify margin-bottom-1" style="border-top: 1px solid #F1F4F9; border-bottom: 1px solid #F1F4F9";>
+            <div class="cell shrink"><a href="#" class="button clear default margin-0 padding-horizontal-0"><span class="button-icon button-icon--round"><svg viewbox="0 0 32 32"><use xlink:href="#calendar"></use></svg></span>Добавить в календарь</a></div>
+            <div class="cell shrink"><a href="#" class="button clear default margin-0 padding-horizontal-0"><span class="button-icon button-icon--round"><svg viewbox="0 0 32 32"><use xlink:href="#xls"></use></svg></span>Выгрузить в Excel</a></div>
+          </div>
+          <div class="table-scroll">
+            <table class="timetable">
+              <thead>
+                <tr>
+                  <th>Время</th>
+                  <th>Аудитория</th>
+                  <th>Тип занятия</th>
+                  <th>Дисциплина</th>
+                  <th>Преподаватель</th>
+                </tr>
+              </thead>
+              <!--Один день - один tbody-->
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Понедельник</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Управление государственными и муниципальными услугами и заказами</td>
+                  <td>Рябова Татьяна Михайловна<br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Семинар</td>
+                  <td>Управление территориальными сообществами и земельными ресурсами</td>
+                  <td>Ерошкин Сергей Юрьевич<br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Второй иностранный язык (Немецкий)</td>
+                  <td>Байнова Мария Сергеевна <br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Практическое занятие</td>
+                  <td>Принятие и исполнение государственных решений</td>
+                  <td>Маркова Татьяна Сергеевна <br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+              </tbody>
+              <!--//Один день - один tbody-->
+              {{#repeat 3}}
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Понедельник</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Управление государственными и муниципальными услугами и заказами</td>
+                  <td>Рябова Татьяна Михайловна<br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Семинар</td>
+                  <td>Управление территориальными сообществами и земельными ресурсами</td>
+                  <td>Ерошкин Сергей Юрьевич<br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Второй иностранный язык (Немецкий)</td>
+                  <td>Байнова Мария Сергеевна <br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Практическое занятие</td>
+                  <td>Принятие и исполнение государственных решений</td>
+                  <td>Маркова Татьяна Сергеевна <br><span class="medium-gray-color">к.соц.н.</span></td>
+                </tr>
+              </tbody>
+              {{/repeat}}
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Суббота: занятий нет</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--//Расписание занятий-->
+        </div>
+        <div class="tabs-panel" id="panel2">
+          <!--Расписание преподавателей-->
+          <form class="form form-timetable hide-for-print">
+            <div class="grid-x align-center">
+              <div class="cell large-10">
+                <fieldset class="form-timetable-search">
+                  <input type="search" placeholder="Поиск по преподавателю"/>
+                  <button type="button"><svg viewbox="0 0 32 32"><use xlink:href="#search"></use></svg></button>
+                </fieldset>
+                <fieldset class="form-timetable-filter">
+                  <div class="button-group large-justify-center">
+                    <button type="button" class="round primary button">24.03. 2020 - 01.04. 2020</button>
+                    <button type="button" class="round light-gray button">02.04. 2020 - 08.04. 2020</button>
+                    <button type="button" class="round light-gray button">09.04. 2020 - 16.04. 2020</button>
+                    <button type="button" class="round light-gray button">17.04. 2020 - 25.04. 2020</button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+          <div class="grid-x align-justify margin-bottom-1" style="border-top: 1px solid #F1F4F9; border-bottom: 1px solid #F1F4F9";>
+            <div class="cell shrink"><a href="#" class="button clear default margin-0 padding-horizontal-0"><span class="button-icon button-icon--round"><svg viewbox="0 0 32 32"><use xlink:href="#calendar"></use></svg></span>Добавить в календарь</a></div>
+            <div class="cell shrink"><a href="#" class="button clear default margin-0 padding-horizontal-0"><span class="button-icon button-icon--round"><svg viewbox="0 0 32 32"><use xlink:href="#xls"></use></svg></span>Выгрузить в Excel</a></div>
+          </div>
+          <div class="table-scroll">
+            <table class="timetable">
+              <thead>
+                <tr>
+                  <th>Время</th>
+                  <th>Аудитория</th>
+                  <th>Тип занятия</th>
+                  <th>Дисциплина</th>
+                  <th>Группа</th>
+                </tr>
+              </thead>
+              <!--Один день - один tbody-->
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Понедельник</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Управление государственными и муниципальными услугами и заказами</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Семинар</td>
+                  <td>Управление территориальными сообществами и земельными ресурсами</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Второй иностранный язык (Немецкий)</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Практическое занятие</td>
+                  <td>Принятие и исполнение государственных решений</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+              </tbody>
+              <!--//Один день - один tbody-->
+              {{#repeat 3}}
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Понедельник</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Управление государственными и муниципальными услугами и заказами</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Семинар</td>
+                  <td>Управление территориальными сообществами и земельными ресурсами</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Лекция</td>
+                  <td>Второй иностранный язык (Немецкий)</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>ВП8-404</td>
+                  <td>Практическое занятие</td>
+                  <td>Принятие и исполнение государственных решений</td>
+                  <td>ЮСТ-Б-2-В-2017-1 (ИП)</td>
+                </tr>
+              </tbody>
+              {{/repeat}}
+              <tbody>
+                <tr>
+                  <td class="timetable-day" colspan="5">22.03.2020 Суббота: занятий нет</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <!--//Расписание преподавателей-->
+        </div>
+        <div class="tabs-panel" id="panel3">
+          <!--Загруженность аудиторий-->
+          <form class="form form-timetable hide-for-print">
+            <div class="grid-x align-center">
+              <div class="cell large-10">
+                <fieldset class="form-timetable-search">
+                  <input type="search" placeholder="Поиск по аудитории"/>
+                  <button type="button"><svg viewbox="0 0 32 32"><use xlink:href="#search"></use></svg></button>
+                </fieldset>
+                <fieldset class="form-timetable-filter">
+                  <div class="button-group large-justify-center">
+                    <button type="button" class="round primary button">24.03. 2020 - 01.04. 2020</button>
+                    <button type="button" class="round light-gray button">02.04. 2020 - 08.04. 2020</button>
+                    <button type="button" class="round light-gray button">09.04. 2020 - 16.04. 2020</button>
+                    <button type="button" class="round light-gray button">17.04. 2020 - 25.04. 2020</button>
+                  </div>
+                </fieldset>
+              </div>
+            </div>
+          </form>
+          <div class="table-scroll">
+            <table class="timetable-load">
+              <thead>
+                <tr>
+                  <th>Время</th>
+                  <th>22.03 <small class="medium-gray-color">Понедельник</small></th>
+                  <th>23.03 <small class="medium-gray-color">Вторник</small></th>
+                  <th>24.03 <small class="medium-gray-color">Среда</small></th>
+                  <th>25.03 <small class="medium-gray-color">Четверг</small></th>
+                  <th>26.03 <small class="medium-gray-color">Пятница</small></th>
+                </tr>
+              </thead>
+              <tbody>
+                {{#repeat 5}}
+                <tr>
+                  <td><span class="primary-color">8:30 - 10:00</span></td>
+                  <td>
+                    <span class="medium-gray-color">Лекция</span><br>
+                    <span>Управление государственными и муниципальными услугами и заказами</span><br>
+                    <span class="medium-gray-color">Галаева Елена Ивановна, к.соц.н.</span><br>
+                    <span class="medium-gray-color">ЮСТ-Б-2-В-2017-1 (ИП)</span>
+                  </td>
+                  <td>
+                    <span class="medium-gray-color">Лекция</span><br>
+                    <span>Управление государственными и муниципальными услугами и заказами</span><br>
+                    <span class="medium-gray-color">Галаева Елена Ивановна, к.соц.н.</span><br>
+                    <span class="medium-gray-color">ЮСТ-Б-2-В-2017-1 (ИП)</span>
+                  </td>
+                  <td>
+                    <span class="medium-gray-color">Лекция</span><br>
+                    <span>Управление государственными и муниципальными услугами и заказами</span><br>
+                    <span class="medium-gray-color">Галаева Елена Ивановна, к.соц.н.</span><br>
+                    <span class="medium-gray-color">ЮСТ-Б-2-В-2017-1 (ИП)</span>
+                  </td>
+                  <td>
+                    <span class="medium-gray-color">Лекция</span><br>
+                    <span>Управление государственными и муниципальными услугами и заказами</span><br>
+                    <span class="medium-gray-color">Галаева Елена Ивановна, к.соц.н.</span><br>
+                    <span class="medium-gray-color">ЮСТ-Б-2-В-2017-1 (ИП)</span>
+                  </td>
+                  <td>
+                    <span class="medium-gray-color">Лекция</span><br>
+                    <span>Управление государственными и муниципальными услугами и заказами</span><br>
+                    <span class="medium-gray-color">Галаева Елена Ивановна, к.соц.н.</span><br>
+                    <span class="medium-gray-color">ЮСТ-Б-2-В-2017-1 (ИП)</span>
+                  </td>
+                </tr>
+                {{/repeat}}
+              </tbody>
+            </table>
+          </div>
+          <!--//Загруженность аудиторий-->
+        </div>
+        <div class="tabs-panel" id="panel4"></div>
+        <div class="tabs-panel" id="panel5"></div>
+        <div class="tabs-panel" id="panel6"></div>
+        <div class="tabs-panel" id="panel7"></div>
+      </div>
+    </div>
+  </div>
+</section>

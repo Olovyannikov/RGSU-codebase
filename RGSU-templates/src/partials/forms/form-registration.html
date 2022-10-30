@@ -1,0 +1,95 @@
+<form class="form form-reg">
+  <fieldset>
+    <div class="grid-x grid-margin-x align-center">
+      <div class="cell auto">
+        <div class="grid-x grid-margin-x">
+          <div class="cell large-4">
+            <div class="field">
+              <label for="reg-lastname">Фамилия</label>
+              <input type="text" id="reg-lastname" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="field">
+              <label for="reg-firstname">Имя</label>
+              <input type="text" id="reg-firstname" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell large-4">
+            <div class="field">
+              <label for="reg-surname">Отчество</label>
+              <input type="text" id="reg-surname">
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="reg-email">Email</label>
+              <input type="email" id="reg-email" data-xp="required: true">
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="reg-phone">Телефон</label>
+              <input type="tel" class="phone-mask" id="reg-phone" data-xp="required: true">
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="reg-snils">СНИЛС</label>
+              <input type="text" id="reg-snils" data-inputmask="'mask': '999-999-99 99'">
+            </div>
+          </div>
+          <div class="cell medium-6">
+            <div class="field">
+              <label for="reg-birthdate">Дата рождения</label>
+              <input type="text" id="reg-birthdate" data-date-picker data-inputmask="'mask': '99.99.9999'">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-x">
+      <div class="cell">
+        <div class="field options">
+          <!--Это один чекбокс-->
+          <div class="selector">
+            <div class="pretty p-default p-curve p-smooth p-has-focus">
+              <input type="checkbox" id="reg-agree" data-xp="required: true"/>
+              <div class="state p-primary">
+                <label for="reg-agree">Согласен на обработку моих <a href="#" title="Узнать больше">персональных данных</a></label>
+              </div>
+            </div>
+          </div>
+          <!--//Это один чекбокс-->
+
+          <!--Это один чекбокс-->
+          <div class="selector">
+            <div class="pretty p-default p-curve p-smooth p-has-focus">
+              <input type="checkbox" id="reg-subscribe" data-xp="required: true"/>
+              <div class="state p-primary">
+                <label for="reg-subscribe">Согласен на получение уведомлений и рассылок</label>
+              </div>
+            </div>
+          </div>
+          <!--//Это один чекбокс-->
+        </div>
+      </div>
+    </div>
+
+    <div class="grid-x grid-margin-x align-justify">
+      <div class="cell small-6">
+        <input type="submit" class="button margin-0" value="Регистрация" data-xp="enabled_on_completed: true">
+      </div>
+      <div class="cell small-6 text-right">
+        <a href="#" class="button medium-gray hollow margin-0" data-close>Отказаться</a>
+      </div>
+    </div>
+
+
+  </fieldset>
+</form>

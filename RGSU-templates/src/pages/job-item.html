@@ -1,0 +1,133 @@
+---
+title: Доцент кафедры безопасности
+layout: default
+step: 1
+---
+
+<div class="page-header">
+  <h1 class="page-title">{{title}}</h1>
+</div>
+
+<div class="grid-x grid-margin-x">
+  <div class="cell large-9">
+    <!--Вакансия-->
+    <section class="section" id="vacancy-data">
+      <div class="card">
+        <div class="vacancy-card__labels">
+          <span class="label primary">конкурс</span>
+        </div>
+        <div class="vacancy-card-data">
+          <header class="vacancy-card__header">
+            <p class="h2 vacancy-card__title">{{title}}</p>
+            <p class="vacancy-card__subtitle">{{this.subtitle}}</p>
+          </header>
+          <section class="vacancy-card__content">
+            <ul class="vacancy-requirements">
+              <li>
+                <p class="h3">Обязанности</p>
+                <p>Проведение учебных занятий по программам бакалавриата, магистратуры, подготовки кадров высшей квалификации, оценка освоения образовательных программ, разработка учебно-методических курсов курируемых дисциплин, участие в научной деятельности кафедры, включая участие в конференциях, публикациях в журналах ВАК.</p>
+              </li>
+              <li>
+                <p class="h3">Требования</p>
+                <ul>
+                  <li>Высшее образование – специалитет, магистратура, аспирантура "Адаптивная физическая культура"; профессиональная переподготовка "Адаптивная физическая культура"</li>
+                  <li>Опыт работы в области адаптивной физической культуры</li>
+                  <li>Стаж научно-педагогической работы в области адаптивной физической культуры</li>
+                </ul>
+              </li>
+              <li>
+                <p class="h3">Условия</p>
+                <ul>
+                  <li>График работы согласно расписанию учебных занятий</li>
+                  <li>Работа в стабильной бюджетной организации</li>
+                </ul>
+              </li>
+              <li>
+                <p class="h3">Требуемые документы</p>
+                <p>Для вакансии требуется подготовить перечнь документов:</p>
+                <ul class="no-bullet">
+                  <li><a href="#" class="file-link"><i class="file-icon"><svg viewbox="0 0 32 32"><use xlink:href="#page"></use></svg></i><span class="file-link__title">Заявление о согласии на обработку персональных данных</span></a></li>
+                  <li><a href="#" class="file-link"><i class="file-icon"><svg viewbox="0 0 32 32"><use xlink:href="#page"></use></svg></i><span class="file-link__title">Заявление о чести и достоинстве работчников РГСУ</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </section>
+        </div>
+      </div>
+    </section>
+    <section>
+      <h3 class="medium-gray-color">Ключевые слова вакансии</h3>
+      <div class="button-group">
+        <a href="#" class="medium-gray rounded hollow button">#доцент</a>
+        <a href="#" class="medium-gray rounded hollow button">#факультет управления</a>
+        <a href="#" class="medium-gray rounded hollow button">#конкурс2020</a>
+      </div>
+    </section>
+    <!--//Вакансия-->
+  </div>
+  <div class="cell large-3 hide-for-print">
+    <!--Отклик-->
+    <div data-sticky-container>
+      <div class="vacancy-sticky sticky" data-sticky data-sticky-on="large" data-anchor="vacancy-data" data-margin-top="0">
+        <section class="section">
+          <div class="grid-x grid-margin-x">
+            <div class="cell medium-6 large-12">
+              <div class="card">
+                <div class="card-section">
+                  <div class="timetable-widget">
+                    <span class="timetable-widget__time margin-bottom-1">5 дней</span>
+                    <span class="timetable-widget__date margin-0">Осталось до конца приема заявлений</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="cell medium-6 large-12">
+              <div class="card">
+                <div class="card-section">
+                  <h4 class="card__title">Откликнуться</h4>
+                  <form class="form form-job-reply">
+                    <fieldset>
+                      <label for="file" class="file-upload">
+                        <input type="file" class="hide" id="file">
+                        <span class="file-upload__title"><span class="caption">Загрузите документы +</span></span>
+                        <span class="file-upload__helper">* Максимальный размер 20 МБ</span>
+                      </label>
+                    </fieldset>
+                    <button type="submit" class="button margin-0">Откликнуться</button>
+                  </form>
+                  <hr>
+                  <p>Для отлика на вакансию Вы должны быть зарегистрированы на портале</p>
+                  <a href="#" class="button">Зарегистрироваться</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+    <!--//Отклик-->
+  </div>
+</div>
+
+<div class="grid-x grid-margin-x hide-for-print">
+  <div class="cell large-9">
+    <!--Похожие вакансии-->
+    <section class="section">
+      <p class="h1 page-title margin-bottom-1">Похожие вакансии</p>
+      <div class="card">
+        {{#repeat 2}}
+        {{> card-vacancy
+          title='Доцент кафедры безопасности'
+          subtitle='Факультет информационных технологий, Кафедра безопасности'
+          date='22 декабря 2019'
+          content='Участвовать в научно-исследовательской работе кафедры и иных подразделений образовательного учреждения. Принимать участие в разработке методических пособий, лабораторных работ, практических...'
+        }}
+        {{/repeat}}
+      </div>
+    </section>
+    <!--//Похожие вакансии-->
+  </div>
+</div>
+
+
+

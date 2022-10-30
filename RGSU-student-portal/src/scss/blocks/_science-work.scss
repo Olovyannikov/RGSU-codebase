@@ -1,0 +1,14 @@
+.science-work {
+}
+
+.science-work__header {
+  @include headerBlock;
+}
+
+.science-work__title {
+}
+
+.science-work__progress {
+  display: flex;
+  align-items: center;
+}

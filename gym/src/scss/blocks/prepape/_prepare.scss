@@ -1,0 +1,78 @@
+.prepare-quiz {
+  &__title {
+    font-size: rem-calc(22);
+    line-height: rem-calc(26.4);
+    margin: 0 0 35px;
+  }
+  &__level-type {
+    display: inline-block;
+    margin-bottom: 35px;
+    margin-right: 20px;
+  }
+  select {
+    width: 200px;
+  }
+
+  &__level-descr {
+    padding-left: 30px;
+    border-left: 2px solid #8dc603;
+    margin-bottom: 55px;
+  }
+
+  &__level-title {
+    display: inline-block;
+    margin-bottom: 20px;
+  }
+
+  &__physique {
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+            'title title'
+            'sex data';
+    &-sex {
+      grid-area: sex;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      row-gap: 10px;
+      padding: 0 18px;
+    }
+    &-data {
+      text-transform: lowercase;
+      grid-area: data;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      label {
+        display: flex;
+        justify-content: space-between;
+        width: 75%;
+      }
+    }
+    .prepare-quiz__subtitle {
+      grid-area: title;
+      margin: 0;
+    }
+  }
+
+  &__limits {
+    margin-bottom: 40px;
+    width: 100%;
+  }
+
+  &__limits-wrapper {
+    width: 60%;
+    height: 220px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    padding: 0 18px;
+    label {
+      margin-bottom: 10px;
+      margin-right: 50px;
+    }
+  }
+
+}

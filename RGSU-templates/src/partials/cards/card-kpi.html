@@ -1,0 +1,56 @@
+<div class="card card--stack">
+  <div class="card-section">
+    <h3 class="card__title">Показатели KPI</h3>
+    <div class="chart-container" width="100%" height="300px">
+      <canvas id="kpi" ></canvas>
+      <script>
+        $(document).ready(function(){
+          var ctx = document.getElementById('kpi');
+          var kpi_radar = new Chart(ctx, {
+            type: 'polarArea',
+            data: {
+              labels: ['Красный', 'Синий', 'Желтый', 'Зеленый' ],
+              datasets: [{
+                //label: 'Показатели KPI за первый квартал',
+                data: [3, 4, 1, 2],
+                backgroundColor: [
+                  'rgba(255, 99, 132, 0.5)',
+                  'rgba(54, 162, 235, 0.5)',
+                  'rgba(255, 206, 86, 0.5)',
+                  'rgba(75, 192, 192, 0.5)',
+                ],
+                borderColor: [
+                  'rgba(255, 99, 132, 1)',
+                  'rgba(54, 162, 235, 1)',
+                  'rgba(255, 206, 86, 1)',
+                  'rgba(75, 192, 192, 1)',
+                ],
+                borderWidth: 1
+              }]
+            },
+            options: {
+              aspectRatio: 1
+              //Axes: {
+              //  display: false
+              //},
+              //scales: {
+              //  yAxes: [{
+              //    ticks: {
+              //      beginAtZero: true
+              //    }
+              //  }]
+              //}
+            }
+          });
+          
+          function beforePrintHandler () {
+            for (var id in Chart.instances) {
+              Chart.instances[id].resize();
+            }
+          }
+        });
+      </script>
+    </div>
+    
+  </div>
+</div>

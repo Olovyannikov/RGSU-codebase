@@ -1,0 +1,118 @@
+.prepare-content {
+
+  &__descr {
+    margin-bottom: 40px;
+  }
+
+  &__disclaimer {
+    font-style: italic;
+    padding-left: 40px;
+    border-left: 2px solid #8dc603;
+    margin-bottom: 80px;
+  }
+
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-size: rem-calc(33);
+    line-height: rem-calc(40);
+
+    span {
+      font-size: rem-calc(18);
+      line-height: rem-calc(20);
+    }
+  }
+}
+
+.prepare {
+  &__list {
+    @include list-reset;
+    counter-reset: myCounter;
+    padding-left: 40px;
+    margin-top: 40px;
+
+    li {
+      position: relative;
+      margin-bottom: 40px;
+      &::before {
+        position: absolute;
+        left: -60px;
+        top: -10px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        counter-increment: myCounter;
+        content: counter(myCounter, upper-roman);
+        color: inherit;
+        background: transparent;
+        border: 2px solid currentColor;
+        font-weight: bold;
+        border-radius: 50%;
+        line-height: 40px;
+        width: 35px;
+        height: 35px;
+      }
+
+      .prepare__list-title {
+        margin-bottom: 30px;
+      }
+    }
+  }
+}
+
+.prepare__list-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  column-gap: 40px;
+  margin-bottom: 60px;
+  input {
+    background-color: transparent;
+    border: 2px solid black;
+    width: 100px;
+    padding: 5px;
+  }
+
+  label {
+    font-weight: bold;
+    display: flex;
+    flex-direction: column;
+    input {
+      margin-top: 20px;
+    }
+  }
+}
+
+.prepare__time {
+  font-weight: bold;
+  &_big {
+    display: block;
+    width: 100%;
+    margin-top: 40px;
+    font-size: rem-calc(100);
+    color: #8dc603;
+
+  }
+}
+
+.prepare__complex {
+  margin-top: 60px;
+  position: relative;
+  margin-bottom: 40px;
+  img {
+    position: absolute;
+    top: 0;
+    right: 50%;
+  }
+}
+
+.prepare-2__wrapper {
+  display: flex;
+  flex-direction: column;
+  .btn {
+    align-self: center;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}

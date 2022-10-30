@@ -1,0 +1,65 @@
+.stories {
+  width: 100%;
+  max-width: 1005px;
+  margin-bottom: 45px;
+}
+
+.stories__header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 35px;
+}
+
+.stories__title {
+  white-space: nowrap;
+}
+
+.stories__wrapper {
+  margin-bottom: 36px;
+}
+
+.stories__picture {
+  width: 141px;
+  height: 184px;
+  object-fit: cover;
+  border-radius: 4px;
+  padding: 3px;
+  border: 2px solid #2BC584;
+  box-sizing: border-box;
+}
+
+.stories__buttons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 26px;
+}
+
+.stories__accordeon-button {
+  @include btn-reset;
+  color: $c-light;
+  background-color: $c-blue;
+  min-width: 31px;
+  height: 31px;
+  border-radius: 50%;
+  position: relative;
+  &::before, &::after {
+    position: absolute;
+    display: block;
+    content: '';
+    background: $c-light;
+    transform: translateX(-50%);
+    left: 50%;
+  }
+  &::after {
+    width: 17px;
+    height: 1px;
+  }
+  &::before {
+    width: 1px;
+    height: 17px;
+    top: 50%;
+    transform: translateY(-50%)
+  }
+}

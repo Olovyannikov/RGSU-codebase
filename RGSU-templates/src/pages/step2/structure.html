@@ -1,0 +1,53 @@
+---
+title: Руководство
+layout: sidebar-left
+sidebar: left
+step: 2
+---
+<!--//Руководство-->
+<section class="section">
+  <div class="card card--large-stack">
+    <div class="card-section">
+      <ul class="tabs" data-tabs id="example-tabs" data-deep-link="true" data-update-history="true">
+        <li class="tabs-title is-active" role="presentation"><a href="#panel1" aria-selected="true">Ректорат</a></li>
+        <li class="tabs-title" role="presentation"><a href="#panel2" aria-controls="panel2" aria-selected="false">Ученый совет</a></li>
+      </ul>
+      <div class="tabs-content" data-tabs-content="example-tabs">
+        <div class="tabs-panel is-active" id="panel1">
+          <div class="managers">
+            {{> card-manager surname='Починок' firstname='Наталья' lastname='Борисовна' image='dude-4.png' image-size='large' desc='Председатель Ученого совета, Ректор РГСУ, Доктор экономических наук, доцент, действительный член Российской академии социальных наук.' has-contact-form="true"}}
+            {{> card-manager surname='Бахтина' firstname='Ольга' lastname='Юрьевна' image='dude-5.png' desc='Проректор по финансам и административной деятельности' tel='8 495 255-67-67, 1004' email='BakhtinaOIu@rgsu.net'}}
+            {{> card-manager surname='Виноградова' firstname='Марина' lastname='Викторовна' image='dude-7.png' desc='Проректор по научной работе' tel='8 495 255-67-67, 1006' email='TatarinovAU@rgsu.net'}}  
+            {{> card-manager surname='Татаринов' firstname='Андрей' lastname='Юрьевич' image='dude-6.png' desc='Проректор по общественным проектам' tel='8 495 255-67-67, 1205' email='prohorovalv@rgsu.net'}}
+            {{> card-manager surname='Махов' firstname='Александр' lastname='Сергеевич' image='dude-8.png' desc='Декан факультета' tel='8 495 255-67-67, 1205' email='prohorovalv@rgsu.net'}}
+            {{> card-manager surname='Никипорец-Такигава' firstname='Галина' lastname='Юрьевна' image='dude-9.png' desc='Декан факультета' tel='8 495 255-67-67, 1205' email='prohorovalv@rgsu.net'}}
+          </div>
+        </div>
+ 
+        <div class="tabs-panel" id="panel2">
+          <div class="grid-x grid-margin-x grid-margin-y large-up-2">
+            <div class="cell">
+              {{> card-person name='Починок Наталья Борисовна' image='dude-4.png' image-size='large' desc='Ректор'}}
+            </div>
+            <div class="cell">
+              {{> card-person name='Бахтина Ольга Юрьевна' image='dude-5.png' image-size='large' desc='Проректор по финансам и административной деятельности'}}
+            </div>
+            <div class="cell">
+              {{> card-person name='Татаринов Андрей Юрьевич' image='dude-6.png' image-size='large' desc='Проректор по общественным проектам'}}
+            </div>
+            <div class="cell">
+              {{> card-person name='Ануфриева Наталья Ивановна' image='dude-7.png' image-size='large' desc='Директор института'}}
+            </div>
+            <div class="cell">
+              {{> card-person name='Махов Александр Сергеевич' image='dude-8.png' image-size='large' desc='Декан факультета'}}
+            </div>
+            <div class="cell">
+              {{> card-person name='Никипорец-Такигава Галина Юрьевна' image='dude-9.png' image-size='large' desc='Декан факультета'}}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!--//Руководство-->

@@ -1,0 +1,106 @@
+@import "general/rem-calc";
+@import "vendor/normalize";
+@import "general/variables";
+@import "general/mixes";
+@import "general/mixins";
+@import "general/scaffolding";
+@import "vendor/swiper";
+@import "general/btn";
+
+//header
+@import "blocks/header/_header.scss";
+@import "blocks/header/_navigation.scss";
+@import "blocks/header/_dropdown.scss";
+@import "blocks/header/_menu.scss";
+@import "blocks/header/_social.scss";
+@import "blocks/header/_breadcrumbs.scss";
+
+//footer
+@import "blocks/footer/_footer.scss";
+
+//pages
+@import "blocks/pages/pages";
+
+//accordion
+@import "blocks/accordion/_accordion.scss";
+
+//text-content
+@import "blocks/text-content/_text-content.scss";
+
+//news-block
+@import "blocks/news-block/_news-block.scss";
+
+//rubricator
+@import "blocks/rubricator/_rubricator.scss";
+
+//announcement
+@import "blocks/announcement/_announcement.scss";
+
+//checkboxes
+@import "blocks/checkboxes/_checkboxes.scss";
+
+//links
+@import "blocks/links/_links.scss";
+
+//tabs
+@import "blocks/tabs/_tabs.scss";
+
+//links
+@import "blocks/faq-links/_faq-links.scss";
+
+//forms
+@import "blocks/forms/_forms.scss";
+
+//table
+@import "blocks/table/_table.scss";
+
+//face-list
+@import "blocks/face-list/_face-list.scss";
+
+//images
+@import "blocks/images/_images.scss";
+
+//hotels
+@import "blocks/hotels/_hotels.scss";
+
+//fast-links
+@import "blocks/fast-links/_fast-links.scss";
+
+//slider
+@import "blocks/slider/_slider.scss";
+
+//main
+@import "blocks/main/_main.scss";
+
+//hero
+@import "blocks/hero/_hero.scss";
+
+//events
+@import "blocks/events/_events.scss";
+
+//actually
+@import "blocks/actually/_actually.scss";
+
+//inner
+@import "blocks/inner/_inner.scss";
+
+//contacts
+@import "blocks/contacts/contacts.scss";
+
+//cosult
+@import "blocks/consult/consult.scss";
+
+//infoblock
+@import "blocks/info/_info.scss";
+
+//directions-grid
+@import "blocks/directions-grid/_directions-grid.scss";
+
+//directions
+@import "blocks/directions/_directions.scss";
+
+//useful links
+@import "blocks/useful/useful";
+
+//employment
+@import "blocks/employment/employment"

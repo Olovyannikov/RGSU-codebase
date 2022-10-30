@@ -1,0 +1,524 @@
+---
+title: Мой профиль
+layout: sidebar-left
+sidebar: left
+page-share: true
+chart: true
+step: 1
+---
+
+<section class="section">
+    <div class="card card--large-stack">
+        <div class="card-section">
+
+            <link href="/netcat/modules/default/jcropFiles/css/jquery.Jcrop.min.css" rel="stylesheet" type="text/css">
+            <script src="/netcat/modules/default/jcropFiles/js/jquery.Jcrop.min.js"></script>
+            <script src="/netcat/modules/default/jcropFiles/js/script.js"></script>
+            <style>
+                .avatar{position: relative; width:100px; margin:10px 0 0 0 ;border-radius: 50%;}
+                .nc-field-caption {font-weight:bold;}
+                hr {margin:15px 0;}
+                .label {
+                    color: #586374;
+                    background: transparent;
+                }
+                .label:after {
+                    -webkit-transition-duration: 0.25s;
+                    -moz-transition-duration: 0.25s;
+                    -o-transition-duration: 0.25s;
+                    transition-duration: 0.25s;
+                }
+                .check {display:none;}
+                .fileupload label,
+                .icheckbox_square-green{ display:none;}
+                .photo {position:relative; top: -24px;left: 28px;}
+                .photo i {color:#FFF; background:rgb(56, 147, 209); opacity:1; height:42px; width:40px;padding:8px; border-radius: 50%;}
+                .avatar, #cropStep3 img {max-width: 100%;border-radius: 50%;clear:both}
+                .avatar_file {display:none}
+                #cropStep2 {padding: 10px;border: 1px solid #CCC; margin-bottom:10px;}
+                .nomarg {margin-bottom:0;}
+                #cropStep11 label{margin:0;}
+                #cropStep11 .label:hover:after {
+                    display: block;
+                    position: absolute;
+                    left: 0;
+                    top: 0;
+                    width: 100%;
+                    height: 100%;
+                    padding-top: 40%;
+                    font-family: 'Pe-icon-7-stroke';
+                    font-size: 26px;
+                    font-weight: bold;
+                    content: '';
+                    color: #000;
+                    text-align: center;
+                    background: rgba(255,255,255,0.75);
+                    border-radius: 50%;
+                }
+
+                .preloader {
+                .background: url('/tm/dev/img/preloader_cal.gif') no-repeat center;
+                .height: 50px;
+                    text-align: center;
+                }
+                .preloader img {
+                .width: 100%;
+                }
+
+                #cropStep2 {
+                    text-align: center;
+                }
+                .jcrop-holder {
+                    margin: 0 auto;
+                }
+            </style>
+
+
+
+
+
+            <fieldset>
+                <div class="grid-x grid-margin-x">
+                    <div class="cell large-3 text-center">
+
+                        <div class="field">
+                            <div class="image-upload">
+
+                                <!-- step 1-->
+                                <div id="cropStep41">
+                                    <div id="cropStep11">
+
+                                        <label for="image_file" class="image-upload__picture" title="Загрузить новое фото">
+                                            <img id="distPhoto" src="https://corp.rgsu.net/netcat_files/generated/user/503/500x500/6747/30b5254aada4c2afea1dd4eaff53c8cb.jpeg?crop=0%3A0%3A0%3A0&hash=bc21d412ae9861caee82189c859d77b2&resize_mode=1&wm_m=0?v=1602433685">
+                                            <span class="image-upload__overlay">
+                        <span class="image-upload__remove" title="Удалить фото"><svg viewBox="0 0 32 32"><use xlink:href="#cancel"></use></svg></span>
+                        <span class="image-upload__icon"><svg viewBox="0 0 32 32"><use xlink:href="#pencil-1"></use></svg></span>
+                      </span>
+                                        </label>
+                                        <div class="image-upload__file">
+                                            <div class="nc-upload"><div class="nc-upload-files"><input type="hidden" name="f_ForumAvatar_old" value="1601624703.jpeg:image/jpeg:7922:u/avatar-6747.jpeg">
+                                                <div class="nc-upload-file" id="nc_upload_file_ForumAvatar_6747" data-type="image/jpeg"><div class="nc-upload-file-info"><a class="nc-upload-file-name" href="/netcat_files/u/avatar-6747.jpeg?1601624714" target="_blank" tabindex="-1" title="1601624703.jpeg (8 КБ)">1601624703.jpeg</a> <span class="nc-upload-file-size">8 КБ</span> <a href="#" class="nc-upload-file-remove" onclick="document.getElementById('nc_upload_file_ForumAvatar_6747_delete').value=1;document.getElementById('nc_upload_file_ForumAvatar_6747').style.display='none';return false;" title="удалить файл" tabindex="-1">×</a></div><input type="hidden" name="f_KILL503" value="0" id="nc_upload_file_ForumAvatar_6747_delete" class="nc-upload-file-remove-hidden"></div>
+                                            </div><input class="nc-upload-input" name="f_ForumAvatar" size="50" id="image_file" onchange="uploadFile(this); fileSelectHandler();" type="file" accept="image/*">
+                                                <script>/*".($nc='$nc')."*/window.$nc && $nc(document).trigger('apply-upload');</script></div>                    </div>
+
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
+                        <ul class="soc-icons clearfix text-center">
+                        </ul>
+                        <a href="#form-error" class="inline-popup informer">
+                            <i class="informer-icon success-color"><svg viewBox="0 0 32 32"><use xlink:href="#warning"></use></svg></i><br>
+                            <span class="informer-title">Если Вы нашли ошибку, сообщите нам об этом</span>
+                        </a>
+
+                        <div class="change-password">
+
+                            <div id="passwordForm" class="form__password">
+                                <h3 class="form__title">Сменить пароль</h3>
+                                <p class="form__description">
+                                    Вы можете сменить пароль корпоративной учетной записи. Вам будет отправлено
+                                    подтверждение на телефон:
+                                    <span class="form__password-phone">+7(917)***-**-41</span>
+                                </p>
+                                <form action="" class="form__field">
+                                    <div class="field blured">
+                                        <label style="display: none" for="newPassword">ВК</label>
+                                        <input placeholder="********" name="f_newPassword" size="50" type="password"
+                                               id="newPassword"
+                                                minlength="8" value="" required>
+                                    </div>
+                                    <div class="field blured">
+                                        <label style="display: none" for="newPasswordRepeat">ВК</label>
+                                        <input placeholder="********" name="f_newPasswordRepeat" size="50" type="password"
+                                               id="newPasswordRepeat"
+                                               minlength="8" value="" required>
+                                    </div>
+                                    <div class="cell shrink">
+                                        <input type="submit" class="button" id="changePassword" value="Сменить">
+                                    </div>
+                                </form>
+                            </div>
+
+                            <div id="smsForm" class="form__sms hide">
+                                <h3 class="form__title">Сменить пароль</h3>
+                                <p class="form__description">
+                                    SMS код действителен: 60 секунд
+                                </p>
+
+                                <form id="codeForm" action="" class="form__field">
+                                    <div class="field sms required blured">
+                                        <label for="code">Введите код</label>
+                                        <input type="text" inputmode="numeric" placeholder="****" class="sms-mask"
+                                               minlength="4" maxlength="4" id="code" required>
+                                    </div>
+                                    <a href="#" id="passwordChangeSuccess" class="button primary-color sms"
+                                       data-close="">Подтвердить смену
+                                        пароля</a>
+                                </form>
+                            </div>
+
+                            <div id="successForm" class="form__success hide">
+                                <h3 class="form__title">Пароль изменен!</h3>
+                                <svg width="110" height="110" viewBox="0 0 32 32">
+                                    <g id="shield" width="100%" fill="#229e6a">
+                                        <path d="M28.6,2c-0.2-0.4-0.8-0.5-1.1-0.2c-1.3,1.2-3.1,1.8-4.8,1.8c-2.5,0-4.7-1.2-6.1-3.3C16.4,0.1,16.2,0,16,0
+  		c-0.2,0-0.4,0.1-0.6,0.3C14,2.4,11.7,3.6,9.3,3.6c-1.8,0-3.5-0.7-4.9-1.9C4.2,1.5,4,1.5,3.7,1.6C3.5,1.7,3.3,1.9,3.3,2.2v14.5
+  		c0,8.3,11.8,15,12.3,15.3c0.2,0,0.3,0,0.4,0c0.1,0,0.2,0,0.3-0.1c0.5-0.3,12.3-6.9,12.3-15.3V2.3C28.7,2.2,28.7,2.1,28.6,2z
+  		 M27.3,16.7c0,6.8-9.5,12.8-11.3,13.9c-1.9-1.1-11.3-7.1-11.3-13.9V3.6C6.1,4.5,7.7,5,9.4,5c2.6,0,5-1.2,6.7-3.1
+  		c1.6,2,4.1,3.1,6.7,3.1c1.7,0,3.3-0.5,4.7-1.4L27.3,16.7L27.3,16.7z"></path>
+                                        <path d="M20.5,12.2c-0.3-0.3-0.7-0.3-0.9,0l-4.9,4.9l-2.2-2.2c-0.3-0.3-0.7-0.3-0.9,0c-0.3,0.3-0.3,0.7,0,0.9l2.7,2.7
+  		c0.1,0.1,0.3,0.2,0.5,0.2s0.3-0.1,0.5-0.2l5.3-5.3C20.7,12.9,20.7,12.5,20.5,12.2z"></path>
+                                    </g>
+                                </svg>
+                                <br>
+                                <p class="form__description">
+                                    Ваш пароль изменен успешно!
+                                </p>
+
+                            </div>
+                        </div>
+                        <script>
+                            let changePasswordButton = document.querySelector('#changePassword');
+
+                            changePasswordButton.onclick = function (evt) {
+                                evt.preventDefault();
+                                let newPassword = document.querySelector('#newPassword');
+                                let newPasswordRepeat = document.querySelector('#newPasswordRepeat');
+
+                                if (newPassword.value !== newPasswordRepeat.value) {
+                                    newPassword.classList.add('invalid');
+                                    newPasswordRepeat.classList.add('invalid');
+                                    return false;
+                                }
+
+                                if (newPasswordRepeat.checkValidity() && newPassword.checkValidity()) {
+                                    let passwordForm = document.querySelector('#passwordForm');
+                                    passwordForm.classList.add('hide');
+                                    let smsForm = document.querySelector('#smsForm');
+                                    smsForm.classList.remove('hide');
+                                }
+                            }
+
+                            let passwordChangeBtn = document.querySelector('#passwordChangeSuccess');
+
+                            passwordChangeBtn.onclick = function (evt) {
+                                    evt.preventDefault();
+                                    let smsCode = document.querySelector('#code');
+                                    if (smsCode.checkValidity()) {
+                                        let smsForm = document.querySelector('#smsForm');
+                                        smsForm.classList.add('hide');
+                                        let successForm = document.querySelector('#successForm');
+                                        successForm.classList.remove('hide');
+                                }
+                            }
+                        </script>
+                    </div>
+                    <div class="cell large-9">
+
+                        <!-- форма для аватары upload form -->
+                        <form id="upload_form" enctype="multipart/form-data" method="post" action="/netcat/modules/default/jcropFiles/upload.php">
+                            <!-- hidden crop params -->
+                            <input type="hidden" id="x1" name="x">
+                            <input type="hidden" id="y1" name="y">
+                            <input type="hidden" id="x2" name="w">
+                            <input type="hidden" id="y2" name="h">
+                            <input type="hidden" id="kef" name="kef">
+                            <input type="hidden" id="uf" name="uf">
+                            <input type="hidden" id="ow" name="ow">
+                            <input type="hidden" id="oh" name="oh">
+                            <input type="hidden" id="w" name="w">             <input type="hidden" id="filesize" name="filesize">
+                            <input type="hidden" id="filetype" name="filetype">
+                            <input type="hidden" id="filedim" name="filedim">
+                            <input type="hidden" id="h" name="h">
+
+                            <div id="cropStep2" style="display:none; width:100%;">
+                                <div id="cropPreloader" class="preloader" style="display:none;"><img src="/tm/dev/img/preloader_cal.gif"></div>
+                                <div id="cropStep2content">
+                                    <h2>Выберите область</h2>
+                                    <img id="preview">
+                                    <br>
+                                    <div class="info">
+                                    </div>
+                                    <input type="submit" id="" class="button alert margin-bottom-0" value="Обрезать и загрузить">
+                                </div>
+                            </div>
+                        </form>
+                        <div id="cropStep3" style="display:none;"></div>
+
+                        <!-- основная форма профиля -->
+                        <form name="adminForm" id="adminForm" class="form form-profile" enctype="multipart/form-data" method="post" action="/netcat/message.php">
+                            <div id="nc_moderate_form">
+                                <div class="nc_clear"></div>
+                                <input name="admin_mode" type="hidden" value="">
+                                <input type="hidden" name="nc_token" value="e32c1834f59fbdb49699fd23e7fd4a12">              <input name="catalogue" type="hidden" value="1">
+                                <input name="cc" type="hidden" value="142">
+                                <input name="sub" type="hidden" value="71"><input name="message" type="hidden" value="6747">
+                                <input name="posting" type="hidden" value="1">
+                                <input name="curPos" type="hidden" value="0">
+                                <input name="f_Parent_Message_ID" type="hidden" value="">
+                                <input type="hidden" name="f_Checked" value="1">              <input name="newPhoto" id="newPhoto" type="hidden">
+                            </div>
+
+                            <div class="grid-x grid-margin-x">
+                                <div class="cell">
+                                    <h3>Оловянников Илья Владимирович</h3>
+                                    <div class="sber-area">
+                                        <div class="sber-btn"><a class="sbid-button sbid-button--theme-white sbid-button--size-small" id="i-sbid-button" style="
+	text-decoration: none;	height: 42px;	background-color: #fff;	display: inline-flex;	align-items: center;	padding: 0 12px;	justify-content: center;	border-radius: 4px;	border: 1px solid #767676;	box-shadow: none
+" href="https://online.sberbank.ru/CSAFront/oidc/authorize.do?response_type=code&amp;client_type=PRIVATE&amp;client_id=ce6ba7cf-a1ea-400b-9646-658871b7d251&amp;state=73afabdd3cd66237f7aaee38d5591ad6&amp;redirect_uri=https%3A%2F%2Fcorp.rgsu.net%2Fuser%2Fsberid%2Fresult%2F&amp;scope=openid+name+mobile+email&amp;nonce=n-143_030154beEE&amp;display=popup"><span class="sbid-button__logo"><svg style="display: block" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M13 0C16.0927 0 18.9337 1.08103 21.1657 2.88421L18.6371 4.74793C17.0315 3.64848 15.0899 3.00354 13 3.00354C7.48924 3.00354 3.00587 7.48999 3.00587 13.0013C3.00587 18.5126 7.48924 22.9965 13 22.9965C18.5134 22.9965 22.9968 18.5126 22.9968 13.0013C22.9968 12.9118 22.9941 12.8223 22.9924 12.7328L25.7912 10.6699C25.9289 11.4245 26 12.2055 26 13.0013C26 20.1807 20.1795 26 13 26C5.82135 26 0 20.1807 0 13.0013C0 5.81931 5.82135 0 13 0ZM23.2856 5.05241C23.9006 5.84651 24.4262 6.71169 24.8456 7.63565L13.0002 16.3673L8.05093 13.2628V9.52921L13.0002 12.6337L23.2856 5.05241Z" fill="#08a652"></path></svg></span><span style="
+	font-family: Russia;	font-weight: 400;	text-decoration: none;	color: #000;	font-size: 14px;	margin-left: 8px
+" class="sbid-button__text">Войти по Сбер ID</span></a></div>
+                                        <a href="https://www.sberbank.ru/ru/person/dist_services/sberbankid" target="_blank" class="info-sber-id">Что такое Сбер ID?</a>
+                                        <div class="sber-area-message"></div>
+
+                                    </div>
+                                    <br>
+                                    <p><b>Электронная почта:</b> OloviannikovIV@rgsu.net</p>
+                                    <p><b>Телефон:</b> 1257</p>                    <p><b>Подразделение:</b> Управление информационных систем и технологий</p>                                                                                <hr>
+                                    <div class="field">
+                                        <label for="Additional"><b>Дополнительная информация:</b></label>
+                                        <textarea id="f_Additional" name="f_Additional" rows="5" cols="60"></textarea>                    </div>
+                                    <div class="grid-x grid-margin-x">
+                                        <div class="cell medium-4">
+                                            <div class="field">
+                                                <label for="VK">ВК</label>
+                                                <input name="f_Vk" size="50" type="text" id="VK" maxlength="255" value="">                        </div>
+                                        </div>
+                                        <div class="cell medium-4">
+                                            <div class="field unrequired">
+                                                <label for="Instagram">Instagram</label>
+                                                <input name="f_Instagram" size="50" type="text" id="Instagram" maxlength="255" value="">                        </div>
+                                        </div>
+                                        <div class="cell medium-4">
+                                            <div class="field">
+                                                <label for="Facebook">Facebook</label>
+                                                <input name="f_Fb" size="50" type="text" id="Facebook" maxlength="255" value="">                        </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    <div class="field options">
+                                        <div class="selector switch">
+                                            <div class="pretty p-switch">
+                                                <input type="checkbox" name="f_Public" id="addexperience-public">
+                                                <div class="state p-success">
+                                                    <label for="addexperience-public">Публичная запись</label>
+                                                    <em>(Портфолио Вашего профиля станет доступным по ссылке)</em>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="grid-x margin-x align-justify">
+                                        <div class="cell shrink">
+                                            <input type="submit" class="button" value="Сохранить">
+                                        </div>
+                                        <div class="cell shrink">
+                                            <a href="/" class="hollow medium-gray button">Отменить</a>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                        </form>
+
+
+                    </div>
+                </div>
+            </fieldset>
+
+
+
+
+
+
+            <script>
+                // fix error: "Uncaught TypeError: Cannot read property 'msie' of undefined". The $.browser method has been removed as of jQuery 1.9
+                jQuery.browser = {};
+                (function () {
+                    jQuery.browser.msie = false;
+                    jQuery.browser.version = 0;
+                    if (navigator.userAgent.match(/MSIE ([0-9]+)\./)) {
+                        jQuery.browser.msie = true;
+                        jQuery.browser.version = RegExp.$1;
+                    }
+                })();
+
+
+                function uploadFile(el){
+
+                    $('#cropStep2content').hide();
+                    $('#cropStep2').show();
+                    $('#cropPreloader').show();
+
+                    //$('#cropPreloader').addClass('preloader');
+
+                    var files = $(el)[0].files;
+                    var file = files[0];
+
+                    var xhr = new XMLHttpRequest();
+                    if (xhr.upload) {
+                        xhr.open("POST", '/netcat/modules/default/jcropFiles/uploadFile.php', true);
+                        xhr.setRequestHeader("X_FILENAME", encodeURIComponent(file.name));
+
+                        xhr.send(file);
+                        xhr.onreadystatechange = function() {
+                            if (xhr.readyState != 4) return; // запрос завершён
+                            if (xhr.status != 200) {
+                                console.log('Ошибка ' + xhr.status + ': ' + xhr.statusText);
+                            } else {
+                                if(typeof xhr.responseText !== 'undefined'){
+                                    var a = JSON.parse(xhr.responseText);
+                                    if(typeof a.file !== 'undefined'){
+                                        $('#cropStep1').hide();
+                                        $('#cropStep2').show();
+                                        //$('#cropStep3').hide();
+                                        // $('#cropStep3').html('');
+                                        $('#cropStep4').hide();
+                                        $('#uf').val(a.file);	//--путь к временному файлу на сервере
+                                    } else {
+                                        $('#cropError').html('Ошибка');
+                                        $('#cropStep1').show();
+                                        $('#cropStep2').hide();
+                                        // $('#cropStep3').hide();
+                                        // $('#cropStep3').html('');
+                                        $('#cropStep4').hide();
+                                    }
+                                }
+                            }
+                        }
+                    }
+                };
+
+
+
+                $(document).ready(function(){
+                    $('input[name=password_new]').attr('autocomplete','nope');
+                    $('input[name=password_new_repeat]').attr('autocomplete','nope');
+
+                    $('#upload_form').submit(function(){
+                        if(checkForm() === true){
+                            jQuery.ajax({
+                                url:     $(this).attr('action'),
+                                type:    "POST",
+                                data:    $(this).serialize(),
+                                success: function(response) { //Если все нормально
+
+                                    if(typeof response !== 'undefined'){
+                                        var obj = JSON.parse(response);
+                                        if(typeof obj.f_url !== 'undefined'){
+                                            $('#cropStep1').show();
+                                            $('#cropStep2').hide();
+                                            $('#cropStep4').show();
+                                            $('#distPhoto').attr('src', obj.f_url+'?1602433685');
+                                            $('#newPhoto').val(obj.f_url);
+                                        }
+                                    }
+                                },
+                                error: function(response) { //Если ошибка
+                                    console.log(response);
+                                }
+                            });
+                        }
+                        return false;
+                    });
+                });
+            </script>
+
+            <script src="/netcat/modules/default/lib/sberbank/sberid-sdk.js?v=1"></script>
+            <script>
+                (function () {
+                    const oidcParams = {
+                        response_type : 'code',
+                        client_type   : 'PRIVATE',
+                        client_id     : 'ce6ba7cf-a1ea-400b-9646-658871b7d251',
+                        state         : '73afabdd3cd66237f7aaee38d5591ad6',
+                        redirect_uri  : 'https://corp.rgsu.net/user/sberid/result/',
+                        scope         : 'openid+name+mobile+email',
+                        nonce         :  'n-143_030154beEE',
+                    };
+
+                    function onSuccessCallback(result) {
+                        updateProfile(result);
+                    }
+
+                    function onErrorCallback(result) {
+                        console.log('Что-то пошло не так: ', result)
+                    }
+
+
+                    function updateProfile(data)
+                    {
+                        data.key = 'e32c1834f59fbdb49699fd23e7fd4a12';
+
+                        $.ajax({
+                            method: "POST",
+                            url: '/user/sberid/sber-id.html?nc_ctpl=1143',
+                            data: data,
+                            dataType: 'json'
+                        }).done(function( result ) {
+
+                            if (typeof result.error !== "undefined") {
+                                $('.sber-area .sber-area-message').html('<div class="error">' + result.error  + '</div>');
+                                $(".info-sber-id").hide();
+                            }
+
+                            if (typeof result.message !== "undefined") {
+                                $('.sber-area .sber-area-message').html('<div class="sberid sber-info-ready">' + result.message  + '</div>');
+                                $(".info-sber-id").hide();
+                                $('.sber-btn').remove();
+
+                                $.magnificPopup.open({
+                                    items: {
+                                        src: $('<div class="popup small zoom-anim-dialog card--large-stack" id="popup-success">'
+                                            + '<div class="popup-content">'
+                                            + '<div class="text-center">'
+                                            + '<i class="big-icon success-color"><svg viewbox="0 0 32 32"><use xlink:href="#shield"></use></svg></i>'
+                                            + '<p class="popup-title">Профиль привязан!</p>'
+                                            + '</div>'
+                                            + '</div>'
+                                            + '</div>')
+                                    },
+                                    type: "inline"
+                                });
+                            }
+
+                        });
+                    }
+
+                    const universallinkParams = {
+                        baseUrl                : 'https://online.sberbank.ru/CSAFront/oidc/authorize.do',
+                        needAdditionalRedirect : true
+                    }
+
+                    //Инициализация SDK
+                    var sbSDK = new SberidSDK({
+                        oidc              : oidcParams,
+                        onSuccessCallback : onSuccessCallback,
+                        onErrorCallback   : onErrorCallback,
+                        container         : 'sber-btn',
+                        mweb2app          : true,
+                        display           : 'popup',
+                        universallink     : universallinkParams,
+                        style: {
+                            theme: 'white',
+                            text: 'default',
+                            size: 'small',
+                            type: 'default',
+                            custom: {
+                                borderRadius: 4,
+                                height: 44,
+                                'font-family': 'Russia',
+                                'font-weight': 400,
+                                'box-shadow': 'none'
+                            }
+                        }
+                    }, onSuccessCallback, onErrorCallback);
+                })();
+            </script>
+        </div>
+    </div>
+</section>

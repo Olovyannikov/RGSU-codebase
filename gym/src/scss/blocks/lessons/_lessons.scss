@@ -1,0 +1,84 @@
+.lessons {
+  input[type="text"] {
+    width: 100%;
+  }
+
+  .nav__submenu-sex {
+    display: flex;
+    align-items: center;
+  }
+
+  .nav__submenu-label {
+    position: relative;
+    margin-right: 20px;
+    span {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+  }
+
+  .nav__submenu-select {
+    background: transparent;
+  }
+}
+
+.lessons__sex {
+  margin-right: 30px;
+}
+
+.lessons__lists {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 160px;
+  margin-bottom: 40px;
+}
+
+.lesson__group-title {
+  font-weight: 400;
+}
+
+.lessons__list {
+  @include list-reset;
+
+  li {
+    padding: 5px 0;
+  }
+}
+
+.lesson__warning {
+  margin-bottom: 90px;
+}
+
+.lesson__cards {
+  @include row-flex;
+  justify-content: center;
+  @include lg-block {
+    justify-content: space-between;
+  }
+}
+
+.lesson__card {
+  @include col;
+  @include size(12);
+  background: #fff;
+  padding: 40px 40px 60px;
+  margin-bottom: 20px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, .4);
+  @include md-block {
+    @include size(6)
+  }
+  @include lg-block {
+    @include size(4)
+  }
+}
+
+.lesson__title {
+  font-weight: 600;
+  font-size: 24px;
+  margin: 0 0 50px;
+}
+
+.lesson__descr {
+  margin-bottom: 120px;
+}

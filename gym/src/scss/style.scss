@@ -1,0 +1,23 @@
+@import "general/variables";
+@import "vendor/normalize";
+@import "general/fonts";
+@import "general/rem-calc";
+@import "vendor/smart-grid";
+@import "general/mixins";
+@import "general/scaffoldings";
+
+@import "blocks/pages/pages";
+
+@import "blocks/header/header";
+@import "blocks/social/social";
+@import "blocks/nav/nav";
+@import "blocks/main/main";
+@import "blocks/lessons/lessons";
+@import "blocks/breadcrumbs/breadcrumbs";
+@import "blocks/accordion/accordion";
+@import "blocks/articles/articles";
+@import "blocks/exercise/exercise";
+@import "blocks/prepape/prepare";
+@import "blocks/prepape/prepare-2";
+@import "blocks/level/level";
+@import "blocks/task/task";

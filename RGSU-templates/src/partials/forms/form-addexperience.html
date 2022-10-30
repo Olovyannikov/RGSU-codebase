@@ -1,0 +1,32 @@
+<form class="form form-addexperience">
+  <fieldset>
+    <legend>Образование</legend>
+    <div class="field">
+      <label for="addexperience-institution">Название учебного заведения</label>
+      <input type="text" id="addexperience-institution" data-xp="required: true">
+    </div>
+    <div class="field">
+      <label for="addexperience-year">Год окончания</label>
+      <input type="text" id="addexperience-year" data-xp="required: true">
+    </div>
+    <div class="field">
+      <label for="addexperience-spec">Специализация</label>
+      <input type="text" id="addexperience-spec" data-xp="required: true">
+    </div>
+    <div class="field">
+      <label for="addexperience-qual">Квалификация</label>
+      <input type="text" id="addexperience-qual" data-xp="required: true">
+    </div>
+    <div class="field options">
+      <div class="selector switch">
+        <div class="pretty p-switch">
+            <input type="checkbox" id="addexperience-public"/>
+            <div class="state p-success">
+              <label for="addexperience-public">Публичная запись</label>
+            </div>
+        </div>
+      </div>
+    </div>
+    <input type="submit" class="button margin-0" value="Добавить">
+  </fieldset>
+</form>

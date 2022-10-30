@@ -1,0 +1,57 @@
+---
+title: Профиль сотрудника
+layout: clean
+step: 1
+---
+<!--Юзер-->
+<section class="section">
+  <a href="#" class="profile-card">
+    <div class="profile-card__image">
+      <img src="{{root}}assets/img/dude-2.png" alt="Мельничук Александр Васильевич">
+    </div>
+    <div class="profile-card__content">
+      <span class="profile-card__name"><span class="surname">Мельничук</span> <span class="firstname">Александр</span> <span class="lastname">Васильевич</span></span>
+      <span class="profile-card__desc">Декан факультета управления</span>
+    </div>
+  </a>
+  <p class="text-center margin-top-1 margin-bottom-1"><button type="button" class="secondary round button margin-0"><i class="button-icon margin-0"><svg viewBox="0 0 32 32"><use xlink:href="#print"></use></svg></i>&emsp;Распечатать</button></p>
+</section>
+<!--//Юзер-->
+<div class="grid-container">
+  <div class="grid-x align-center">
+    <div class="cell large-8 print-12">
+      <!--Учебная работа-->
+      <section class="section">
+        <h2 class="section-title">Учебная работа <span>8 из 10</span></h2>
+        <div class="card card--auto card--large-stack">
+          <div class="card-section">
+            {{> accordion}}
+          </div>
+        </div>
+      </section>
+      <!--//Учебная работа-->
+
+      <!--Научная деятельность-->
+      <section class="section">
+        <h2 class="section-title">Научная деятельность <span>6 из 10</span></h2>
+        <div class="card card--auto card--large-stack">
+          <div class="card-section">
+            {{> accordion}}
+          </div>
+        </div>
+      </section>
+      <!--//Научная деятельность-->
+
+      <!--Внеучебная деятельность-->
+      <section class="section">
+        <h2 class="section-title">Внеучебная деятельность <span>10 из 10</span></h2>
+        <div class="card card--auto card--large-stack">
+          <div class="card-section">
+            {{> accordion}}
+          </div>
+        </div>
+      </section>
+      <!--//Внеучебная деятельность-->
+    </div>
+  </div>
+</div>

@@ -1,0 +1,58 @@
+<form class="form form-reference">
+  <div class="grid-x grid-margin-x">
+    <div class="cell large-shrink large-order-2">
+      <div class="informer">
+        <i class="informer-icon success-color"><svg viewbox="0 0 32 32"><use xlink:href="#warning"></use></svg></i>
+        <span class="informer-title">Срок изготовления справок составляет 3-5 дней. Вы получите уведомление на почту и портал.</span>
+      </div>
+    </div>
+    <div class="cell medium-8 large-auto large-order-1">
+      <fieldset>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="reference-type">Выберите тип</label>
+            </div>
+            <div class="cell medium-8 large-6">
+              <select id="reference-type" data-xp="required: true">
+                <option value="2-НДФЛ">2-НДФЛ</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="reference-year">Год</label>
+            </div>
+            <div class="cell medium-8 large-6">
+              <select id="reference-year" data-xp="required: true">
+                <option value="2019">2019</option>
+              </select>
+            </div>
+          </div>
+        </div>
+        <div class="field">
+          <div class="grid-x grid-margin-x align-middle">
+            <div class="cell medium-4 large-3">
+              <label for="referencу-count">Количество</label>
+            </div>
+            <div class="cell medium-3 large-3">
+              <div class="number-input">
+                <button type="button" class="number-input__dec">-</button>
+                <input type="number" class="text-center" value="1" min="1" max="99" data-xp="required: true">
+                <button type="button" class="number-input__inc">+</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="grid-x grid-margin-x">
+          <div class="cell medium-8 large-offset-3">
+            <input type="submit" class="button" value="Заказать" data-xp="enabled_on_completed: true">
+          </div>
+        </div>
+      </fieldset>
+    </div>
+    
+  </div>
+</form>

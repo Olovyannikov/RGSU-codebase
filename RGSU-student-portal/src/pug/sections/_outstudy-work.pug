@@ -1,0 +1,92 @@
+mixin table
+    table.table-scroll.scrollbar-custom
+        thead
+            tr
+                th.table-scroll__title Наименование учебной дисциплины
+                th.table-scroll__title Учебный год
+                th.table-scroll__title Оценка
+                th.table-scroll__title.no-print Письменная работа
+        tbody.body-half-screen
+            tr
+                td(colspan='4').table-scroll__divider.no-print 1 семестр
+            tr
+                td.table-scroll__cell Музыкально-исполнительские школы и концепции
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+                td.table-scroll__cell.no-print Отсутствует
+            tr
+                td.table-scroll__cell Иностранный язык
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cell.no-print: a(href="#") Открыть
+            tr
+                td(colspan='4').table-scroll__divider.no-print 2 семестр
+            tr
+                td.table-scroll__cell Русский язык и культура речи
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Хорошо
+                td.table-scroll__cell.no-print Отсутствует
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cell.no-print: a(href="#") Открыть
+            tr
+                td(colspan='4').table-scroll__divider.no-print 3 семестр
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cell.no-print: a(href="#") Открыть
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cell.no-print: a(href="#") Открыть
+            tr
+                td(colspan='4').table-scroll__divider.no-print 4 семестр
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cell.no-print: a(href="#") Открыть
+            tr
+                td.table-scroll__cell Теория и история музыкального искусства
+                td.table-scroll__cell 1 семестр,Осенний (1 курс)
+                td.table-scroll__cell Зачтено
+                td.table-scroll__cel.no-printl: a(href="#") Открыть
+
+section.activity-work
+    .activity-work__container.container
+        .activity-work__header
+            h2.activity-work__title.title--s Внеучебная деятельность
+            span.divider
+            .activity-work__progress
+                .progress
+                    .progress-bar(data-progress='74')
+                .progress-info
+        .activity-work__wrapper
+            .activity-work__section.accordeon-section
+                p.activity-work__section-title.accordeon-title Членство в общественных организациях
+                    span.activity-work__section-count 4
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title Спортивные достижения
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title  Участие в творческих коллективах
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
+            .activity-work__section
+                p.activity-work__section-title.accordeon-title Творческие достижения
+                    span.activity-work__section-count 2
+                    button.activity-work__section-button.accordeon-button
+                .activity-work__table-container.accordeon-container
+                    +table
