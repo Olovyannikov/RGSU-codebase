@@ -40,9 +40,9 @@ let path = {
 let { src, dest } = require("gulp"),
     gulp = require("gulp"),
     browsersync = require("browser-sync").create(), //Инициализация локального сервера
-    
+
     del = require("del"), //Удаление папки build
-    scss = require("gulp-sass"),
+    scss = require("gulp-sass")(require("sass")),
     autoprefixer = require("gulp-autoprefixer"),
     group_media = require("gulp-group-css-media-queries"),
     clean_css = require("gulp-clean-css"),
